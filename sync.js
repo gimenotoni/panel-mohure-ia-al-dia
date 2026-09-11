@@ -121,10 +121,7 @@ function extractDescription(opportunity, descFieldId) {
 async function main() {
     const pipeline = await findPipeline();
     const descFieldId = await findDescriptionFieldId();
-    const __cf = await ghlFetch(`${BASE}/locations/${LOCATION_ID}/customFields?model=all`);
-    const __oppFields = (__cf.customFields || []).filter((f) => (f.fieldKey || "").indexOf("opportunity.") === 0);
-    console.error("DEBUG_OPP_FIELDS", JSON.stringify(__oppFields.map((f) => ({ id: f.id, key: f.fieldKey, name: f.name }))));
-
+    
   const stageIdByName = {};
     for (const stage of pipeline.stages || []) {
           stageIdByName[norm(stage.name)] = stage.id;
