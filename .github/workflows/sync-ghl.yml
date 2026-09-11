@@ -1,0 +1,4 @@
+name: Sincronizar oportunidades GHL
+on: {schedule: [{cron: "*/15 * * * *"}], workflow_dispatch: {}}
+permissions: {contents: write}
+jobs: {sync: {runs-on: ubuntu-latest, steps: [{uses: "actions/checkout@v4"}, {uses: "actions/setup-node@v4", with: {node-version: 20}}, {name: "Consultar GHL y generar data.json", env: {GHL_API_TOKEN: "${{ secrets.GHL_API_TOKEN }}", GHL_LOCATION_ID: "FwIpGrmFS8avjRhRIcfT", GHL_PIPELINE_NAME: "MOHURE - IA AL DÍA", GHL_DESC_FIELD_KEY: "opportunity.descripcion"}, run: "node sync.js"}, {name: "Publicar data.json si cambio", run: "git config user.name \"github-actions[bot]\"\ngit config user.email \"github-actions[bot]@users.noreply.github.com\"\ngit add data.json\ngit diff --cached --quiet || git commit -m \"chore: sync oportunidades GHL [skip ci]\"\ngit push"}]}}
