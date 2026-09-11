@@ -1,226 +1,484 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOHURE - IA AL DÍA · Panel de oportunidades</title>
-  <style>
-      :root {
-            --bg: #f4f5f7;
-            --panel-bg: #ffffff;
-            --column-bg: #ebecf0;
-            --text: #172b4d;
-            --text-muted: #5e6c84;
-            --border: #dfe1e6;
-            --card-shadow: 0 1px 2px rgba(9, 30, 66, 0.15), 0 1px 1px rgba(9, 30, 66, 0.1);
-            --accent-1: #0079bf;
-            --accent-2: #61bd4f;
-            --accent-3: #00875a;
-            --accent-4: #ff9f1a;
-      }
-      @media (prefers-color-scheme: dark) {
-            :root {
-                    --bg: #0d1117;
-                    --panel-bg: #161b22;
-                    --column-bg: #1c2128;
-                    --text: #e6edf3;
-                    --text-muted: #8b949e;
-                    --border: #30363d;
-                    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            }
-      }
-      * { box-sizing: border-box; }
-      body {
-            margin: 0;
-            background: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      }
-      header {
-            padding: 20px 24px 12px;
-      }
-      header h1 {
-            margin: 0 0 4px;
-            font-size: 20px;
-      }
-      header p {
-            margin: 0;
-            font-size: 13px;
-            color: var(--text-muted);
-      }
-      #status {
-            padding: 0 24px 12px;
-            font-size: 12px;
-            color: var(--text-muted);
-      }
-      #board {
-            display: flex;
-            gap: 16px;
-            padding: 0 24px 24px;
-            overflow-x: auto;
-            align-items: flex-start;
-      }
-      .column {
-            background: var(--column-bg);
-            border-radius: 10px;
-            min-width: 280px;
-            max-width: 320px;
-            flex: 1 1 280px;
-            display: flex;
-            flex-direction: column;
-            max-height: calc(100vh - 140px);
-      }
-      .column-header {
-            padding: 12px 14px 8px;
-            font-weight: 600;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-      }
-      .column-header .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            flex-shrink: 0;
-      }
-      .column:nth-child(1) .dot { background: var(--accent-1); }
-      .column:nth-child(2) .dot { background: var(--accent-4); }
-      .column:nth-child(3) .dot { background: var(--accent-3); }
-      .column:nth-child(4) .dot { background: var(--accent-2); }
-      .column-count {
-            margin-left: auto;
-            font-weight: 400;
-            color: var(--text-muted);
-            font-size: 12px;
-      }
-      .cards {
-            padding: 0 10px 10px;
-            overflow-y: auto;
-      }
-      .card {
-            background: var(--panel-bg);
-            border-radius: 8px;
-            padding: 10px 12px;
-            margin-bottom: 8px;
-            box-shadow: var(--card-shadow);
-            border: 1px solid var(--border);
-      }
-      .card-title {
-            font-size: 14px;
-            font-weight: 600;
-            margin: 0 0 4px;
-      }
-      .card-desc {
-            font-size: 12.5px;
-            color: var(--text-muted);
-            margin: 0;
-            white-space: pre-wrap;
-      }
-      .empty {
-            padding: 20px 12px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 13px;
-      }
-      #error {
-            display: none;
-            margin: 0 24px 16px;
-            padding: 12px 16px;
-            border-radius: 8px;
-            background: #ffebe9;
-            color: #82231d;
-            font-size: 13px;
-      }
-      @media (prefers-color-scheme: dark) {
-            #error { background: #3d1f1c; color: #ffb4a8; }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-        <h1>MOHURE - IA AL DÍA</h1>
-      <p>Oportunidades del pipeline, agrupadas por estado</p>
-    </header>
-  <div id="status">Cargando…</div>
-  <div id="error"></div>
-  <div id="board"></div>
-  
-  <script>
-      const boardEl = document.getElementById("board");
-      const statusEl = document.getElementById("status");
-      const errorEl = document.getElementById("error");
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MOHURE - IA AL DÍA · Panel de oportunidades</title>
+<style>
+:root {
+  --bg: #f4f5f7;
+  --panel-bg: #ffffff;
+  --column-bg: #eef0f4;
+  --text: #172b4d;
+  --text-muted: #5e6c84;
+  --border: #dfe1e6;
+  --card-shadow: 0 1px 2px rgba(9, 30, 66, 0.15), 0 1px 1px rgba(9, 30, 66, 0.1);
+  --accent-1: #0079bf;
+  --accent-2: #61bd4f;
+  --accent-3: #00875a;
+  --accent-4: #ff9f1a;
+  --brand-1: #6c5ce7;
+  --brand-2: #341f97;
+  --danger: #de350b;
+  --danger-bg: #ffebe6;
+  --pill-bg: #eef0f4;
+  --pill-active-bg: #172b4d;
+  --pill-active-text: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --panel-bg: #161b22;
+    --column-bg: #1c2128;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --border: #30363d;
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --danger: #ff9d8a;
+    --danger-bg: #3d1f1c;
+    --pill-bg: #21262d;
+    --pill-active-bg: #e6edf3;
+    --pill-active-text: #0d1117;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 8px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.brand-text h1 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.brand-text p {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+.refresh-btn {
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.refresh-btn:hover { border-color: var(--brand-1); color: var(--brand-1); }
+.refresh-btn.spinning .refresh-icon { animation: spin 0.7s linear; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-      function formatDate(iso) {
-            if (!iso) return "";
-            const d = new Date(iso);
-            return d.toLocaleString("es-ES", {
-                    day: "2-digit",
-                    month: "2-digit",
-                    year: "numeric",
-                    hour: "2-digit",
-                    minute: "2-digit",
-            });
-      }
+.stats-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 4px 24px 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.stat-main {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+.stat-main span { color: var(--brand-1); }
+.stat-sub {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #36b37e;
+  box-shadow: 0 0 0 0 rgba(54, 179, 126, 0.6);
+  animation: pulse 1.8s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(54, 179, 126, 0.6); }
+  70% { box-shadow: 0 0 0 6px rgba(54, 179, 126, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(54, 179, 126, 0); }
+}
 
-      function renderBoard(data) {
-            boardEl.innerHTML = "";
-            (data.columns || []).forEach((col) => {
-                    const column = document.createElement("div");
-                    column.className = "column";
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px 16px;
+  flex-wrap: wrap;
+}
+.search-wrap {
+  position: relative;
+  flex: 1 1 260px;
+  min-width: 220px;
+  max-width: 420px;
+}
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+#searchInput {
+  width: 100%;
+  padding: 9px 12px 9px 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--panel-bg);
+  color: var(--text);
+  font-size: 13px;
+}
+#searchInput:focus {
+  outline: none;
+  border-color: var(--brand-1);
+}
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pill {
+  border: 1px solid var(--border);
+  background: var(--pill-bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.pill.active {
+  background: var(--pill-active-bg);
+  color: var(--pill-active-text);
+  border-color: var(--pill-active-bg);
+}
+.visible-count {
+  margin-left: auto;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.visible-count span { font-weight: 700; color: var(--text); }
 
-                    const header = document.createElement("div");
-                    header.className = "column-header";
-                    header.innerHTML = `<span class="dot"></span><span>${col.label}</span><span class="column-count">${col.opportunities.length}</span>`;
-                    column.appendChild(header);
+#board {
+  display: flex;
+  gap: 16px;
+  padding: 0 24px 24px;
+  overflow-x: auto;
+  align-items: flex-start;
+}
+.column {
+  background: var(--column-bg);
+  border-radius: 10px;
+  min-width: 280px;
+  max-width: 320px;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 210px);
+}
+.column-header {
+  padding: 12px 14px 8px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.column-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.column[data-col="0"] .dot { background: var(--accent-1); }
+.column[data-col="1"] .dot { background: var(--accent-4); }
+.column[data-col="2"] .dot { background: #6b778c; }
+.column[data-col="3"] .dot { background: var(--accent-3); }
+.column-count {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-size: 11.5px;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+}
+.cards {
+  padding: 0 10px 10px;
+  overflow-y: auto;
+}
+.card {
+  background: var(--panel-bg);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+}
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.badge-alta {
+  flex-shrink: 0;
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.card-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.empty {
+  padding: 20px 12px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+#error {
+  display: none;
+  margin: 0 24px 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">
+    <div class="logo">M</div>
+    <div class="brand-text">
+      <h1>MOHURE · IA AL DÍA</h1>
+      <p>Panel de oportunidades en vivo</p>
+    </div>
+  </div>
+  <button id="refreshBtn" class="refresh-btn"><span class="refresh-icon">⟳</span> Actualizar</button>
+</div>
 
-                    const cardsWrap = document.createElement("div");
-                    cardsWrap.className = "cards";
+<div class="stats-row">
+  <div class="stat-main"><span id="oppCount">0</span> OPORTUNIDADES</div>
+  <div class="stat-sub"><span class="live-dot"></span> En vivo · Actualizado <span id="updatedTime">--:--:--</span></div>
+</div>
 
-                    if (!col.opportunities.length) {
-                              const empty = document.createElement("div");
-                              empty.className = "empty";
-                              empty.textContent = "Sin oportunidades";
-                              cardsWrap.appendChild(empty);
-                    } else {
-                              col.opportunities.forEach((opp) => {
-                                          const card = document.createElement("div");
-                                          card.className = "card";
-                                          const title = document.createElement("p");
-                                          title.className = "card-title";
-                                          title.textContent = opp.name;
-                                          card.appendChild(title);
-                                          if (opp.description) {
-                                                        const desc = document.createElement("p");
-                                                        desc.className = "card-desc";
-                                                        desc.textContent = opp.description;
-                                                        card.appendChild(desc);
-                                          }
-                                          cardsWrap.appendChild(card);
-                              });
-                    }
+<div class="controls">
+  <div class="search-wrap">
+    <span class="search-icon">&#128269;</span>
+    <input id="searchInput" type="text" placeholder="Buscar por nombre o descripción..." />
+  </div>
+  <div class="filters" id="filters">
+    <button class="pill active" data-filter="all">Todas</button>
+    <button class="pill" data-filter="alta">Prioridad Alta</button>
+    <button class="pill" data-filter="none">Sin prioridad</button>
+  </div>
+  <div class="visible-count"><span id="visibleCount">0</span> visibles</div>
+</div>
 
-                    column.appendChild(cardsWrap);
-                    boardEl.appendChild(column);
-            });
-      }
+<div id="error"></div>
+<div id="board"></div>
 
-      async function loadData() {
-            try {
-                    const res = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" });
-                    if (!res.ok) throw new Error(`No se pudo cargar data.json (HTTP ${res.status})`);
-                    const data = await res.json();
-                    renderBoard(data);
-                    statusEl.textContent = `Última actualización: ${formatDate(data.updatedAt)} · Pipeline: ${data.pipeline || ""}`;
-                    errorEl.style.display = "none";
-            } catch (err) {
-                    errorEl.textContent = `Error cargando datos: ${err.message}`;
-                    errorEl.style.display = "block";
-            }
-      }
+<script>
+const boardEl = document.getElementById("board");
+const errorEl = document.getElementById("error");
+const oppCountEl = document.getElementById("oppCount");
+const visibleCountEl = document.getElementById("visibleCount");
+const updatedTimeEl = document.getElementById("updatedTime");
+const searchInput = document.getElementById("searchInput");
+const filtersEl = document.getElementById("filters");
+const refreshBtn = document.getElementById("refreshBtn");
 
-      loadData();
-      setInterval(loadData, 5 * 60 * 1000); // refresca la vista cada 5 minutos
-  </script>
-  </body>
+let rawData = null;
+let currentFilter = "all";
+let currentSearch = "";
+
+function formatTime(iso) {
+  if (!iso) return "--:--:--";
+  const d = new Date(iso);
+  return d.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+}
+
+function isAlta(priority) {
+  return !!priority && priority.trim().toLowerCase().includes("alta");
+}
+
+function matchesFilter(opp) {
+  if (currentFilter === "alta") return isAlta(opp.priority);
+  if (currentFilter === "none") return !opp.priority || !opp.priority.trim();
+  return true;
+}
+
+function matchesSearch(opp) {
+  if (!currentSearch) return true;
+  const q = currentSearch.toLowerCase();
+  return (
+    (opp.name || "").toLowerCase().includes(q) ||
+    (opp.description || "").toLowerCase().includes(q)
+  );
+}
+
+function render() {
+  if (!rawData) return;
+  boardEl.innerHTML = "";
+  let totalVisible = 0;
+  const totalAll = (rawData.columns || []).reduce((sum, c) => sum + c.opportunities.length, 0);
+
+  (rawData.columns || []).forEach((col, colIdx) => {
+    const filtered = col.opportunities.filter((opp) => matchesFilter(opp) && matchesSearch(opp));
+    totalVisible += filtered.length;
+
+    const column = document.createElement("div");
+    column.className = "column";
+    column.dataset.col = colIdx;
+
+    const header = document.createElement("div");
+    header.className = "column-header";
+    header.innerHTML = `<span class="dot"></span><span>${col.label}</span><span class="column-count">${filtered.length}</span>`;
+    column.appendChild(header);
+
+    const cardsWrap = document.createElement("div");
+    cardsWrap.className = "cards";
+
+    if (!filtered.length) {
+      const empty = document.createElement("div");
+      empty.className = "empty";
+      empty.textContent = "Sin oportunidades";
+      cardsWrap.appendChild(empty);
+    } else {
+      filtered.forEach((opp) => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const top = document.createElement("div");
+        top.className = "card-top";
+        const title = document.createElement("p");
+        title.className = "card-title";
+        title.textContent = opp.name;
+        top.appendChild(title);
+        if (isAlta(opp.priority)) {
+          const badge = document.createElement("span");
+          badge.className = "badge-alta";
+          badge.textContent = "ALTA";
+          top.appendChild(badge);
+        }
+        card.appendChild(top);
+
+        if (opp.description) {
+          const desc = document.createElement("p");
+          desc.className = "card-desc";
+          desc.textContent = opp.description;
+          card.appendChild(desc);
+        }
+        cardsWrap.appendChild(card);
+      });
+    }
+
+    column.appendChild(cardsWrap);
+    boardEl.appendChild(column);
+  });
+
+  oppCountEl.textContent = totalAll;
+  visibleCountEl.textContent = totalVisible;
+}
+
+async function loadData() {
+  refreshBtn.classList.add("spinning");
+  try {
+    const res = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`No se pudo cargar data.json (HTTP ${res.status})`);
+    const data = await res.json();
+    rawData = data;
+    render();
+    updatedTimeEl.textContent = formatTime(data.updatedAt || new Date().toISOString());
+    errorEl.style.display = "none";
+  } catch (err) {
+    errorEl.textContent = `Error cargando datos: ${err.message}`;
+    errorEl.style.display = "block";
+  } finally {
+    setTimeout(() => refreshBtn.classList.remove("spinning"), 700);
+  }
+}
+
+filtersEl.addEventListener("click", (e) => {
+  const btn = e.target.closest(".pill");
+  if (!btn) return;
+  filtersEl.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
+  btn.classList.add("active");
+  currentFilter = btn.dataset.filter;
+  render();
+});
+
+searchInput.addEventListener("input", (e) => {
+  currentSearch = e.target.value.trim();
+  render();
+});
+
+refreshBtn.addEventListener("click", loadData);
+
+loadData();
+setInterval(loadData, 5 * 60 * 1000); // refresca los datos cada 5 minutos
+</script>
+</body>
 </html>
