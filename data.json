@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T13:34:36.397Z",
+  "updatedAt": "2026-09-11T17:15:19.215Z",
   "pipeline": "MOHURE - IA AL DÍA",
   "columns": [
     {
@@ -30,27 +30,9 @@
           "priority": ""
         },
         {
-          "id": "tioxaiIu2l3rCEAunm4F",
-          "name": "M32 · Redacción de metodologías y materiales comerciales",
-          "description": "Redactar las metodologías de trabajo y los materiales comerciales de Mohure con la plantilla y la voz de la casa.\n\nDel correo de Carmen del 2-sep. Es hermana de la D4 (presentaciones): comparten plantilla y voz. Sin riesgo.",
-          "priority": ""
-        },
-        {
-          "id": "N5lg29Qhr2ulmLmRb5LJ",
-          "name": "M30 · Comunicaciones personalizadas con candidatos",
-          "description": "Escribir los mensajes a candidatos (convocatoria, seguimiento y descarte) con la voz de la casa y adaptados a cada persona.\n\nDel correo de Carmen del 2-sep. Cuidado especial con el feedback de descarte.",
-          "priority": ""
-        },
-        {
           "id": "unbCBuKqAVA8MIMPF864",
           "name": "P29 · Mapping de mercado y búsquedas en LinkedIn y bases de datos",
           "description": "Buscar candidatos y empresas en LinkedIn y bases de datos para un proceso de selección.\n\nDel correo de Carmen del 2-sep. Es hermana de la D16, con el mismo motor y el mismo bloqueo, pero aquí los datos son de personas, así que es más delicada y va aparte. Encuadre en protección de datos antes de nada.",
-          "priority": ""
-        },
-        {
-          "id": "7BtCLq1KrkmvYDdOY2MK",
-          "name": "M28 · Redacción y ajuste de tono de ofertas de empleo",
-          "description": "Redactar las ofertas de empleo con la voz de Mohure y ajustarlas al puesto y al canal, a partir de la misma guía de estilo que los correos (D3).\n\nDel correo de Carmen del 2-sep. Bajo riesgo.",
           "priority": ""
         },
         {
@@ -102,12 +84,6 @@
           "priority": ""
         },
         {
-          "id": "SLtX4oa6JZ6TuhSGXLDR",
-          "name": "M3 · Tono de correo de la casa",
-          "description": "Una guía de voz para que los correos que salen de Mohure suenen igual, los escriba quien los escriba, y para contestar más rápido los repetitivos.\n\nSe construye junto con la D31 (ofertas de empleo), que usa la misma guía con otro destinatario.",
-          "priority": ""
-        },
-        {
           "id": "llGBGHiUq1mBHOd5Ddir",
           "name": "M2 · Informe de selección desde la entrevista",
           "description": "Pasar de la entrevista (transcripción o notas) al informe de valoración del candidato con la estructura de la casa, sin redactarlo desde cero.\n\nYa usan transcriptores en las entrevistas, así que la entrada está resuelta. Carmen lo pide dos veces en su correo del 2-sep: notas estructuradas y borradores de informes.",
@@ -125,6 +101,24 @@
       "label": "En marcha",
       "opportunities": [
         {
+          "id": "tioxaiIu2l3rCEAunm4F",
+          "name": "M32 · Redacción de metodologías y materiales comerciales",
+          "description": "Redactar las metodologías de trabajo y los materiales comerciales de Mohure con la plantilla y la voz de la casa.\n\nDel correo de Carmen del 2-sep. Es hermana de la D4 (presentaciones): comparten plantilla y voz. Sin riesgo.",
+          "priority": ""
+        },
+        {
+          "id": "N5lg29Qhr2ulmLmRb5LJ",
+          "name": "M30 · Comunicaciones personalizadas con candidatos",
+          "description": "Escribir los mensajes a candidatos (convocatoria, seguimiento y descarte) con la voz de la casa y adaptados a cada persona.\n\nDel correo de Carmen del 2-sep. Cuidado especial con el feedback de descarte.",
+          "priority": ""
+        },
+        {
+          "id": "7BtCLq1KrkmvYDdOY2MK",
+          "name": "M28 · Redacción y ajuste de tono de ofertas de empleo",
+          "description": "Redactar las ofertas de empleo con la voz de Mohure y ajustarlas al puesto y al canal, a partir de la misma guía de estilo que los correos (D3).\n\nDel correo de Carmen del 2-sep. Bajo riesgo.",
+          "priority": ""
+        },
+        {
           "id": "6MCrVv9O3rM5OTfyYTuA",
           "name": "M19 · Prompt de trabajo como skill descargable con vídeo",
           "description": "El prompt de trabajo con el que el equipo describe una tarea a Carmen se entrega como skill de Claude, con un vídeo corto de cómo instalarla y una versión pegable para quien no tenga licencia (Denisse).\n\nDecisión de Tony del 25-ago. No se pone fecha hasta tener las dos sesiones de esta semana (Lorena por un lado, Claudia y Chuse por otro), porque la skill tiene que encajar con cómo trabajan de verdad.",
@@ -134,6 +128,18 @@
           "id": "4rXpWqLi4SyegQWYLBVx",
           "name": "M13 · Datos para formaciones FUNDAE (Adams)",
           "description": "Preparar los datos que piden FUNDAE y Adams para las formaciones bonificadas sin volver a teclearlos.\n\nCarmen lo menciona en la P21 y la P23 como un proceso con queja. Todavía no está inventariado: hay que ver con Lorena cómo lo hace hoy.",
+          "priority": ""
+        },
+        {
+          "id": "zR1Mlk6bVvT43As8Mksn",
+          "name": "M9 · Reclamación de impagos desde el Excel de seguimiento",
+          "description": "Sacar qué facturas están vencidas y sin cobrar, y preparar la reclamación al cliente sin revisarlo a mano.\n\nLa facturación está en Zoho, y de ahí sale el listado de lo que se debe con la fecha de emisión de cada factura. Lorena va marcando los pagos uno a uno y, cuando una empresa paga varias facturas de golpe sin decir cuáles, las cuadra a mano con la calculadora.\n\nLo que ella pide son tres plantillas de aviso, primero, segundo y tercero, cada una con su plazo, y que salgan desde su nombre y no desde Zoho, porque así las abren más. Manu no quiere conexión directa entre la IA y Zoho, así que el cruce se hace con ella delante.\n\nLo piden Claudia y Lorena, Manu lo puso encima de la mesa el 25 de agosto y es la prioridad 1 del 28 de agosto. Los cobros han pasado de Claudia a Lorena, que dice que son de su puesto.",
+          "priority": ""
+        },
+        {
+          "id": "SLtX4oa6JZ6TuhSGXLDR",
+          "name": "M3 · Tono de correo de la casa",
+          "description": "Una guía de voz para que los correos que salen de Mohure suenen igual, los escriba quien los escriba, y para contestar más rápido los repetitivos.\n\nSe construye junto con la D31 (ofertas de empleo), que usa la misma guía con otro destinatario.",
           "priority": ""
         },
         {
