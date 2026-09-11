@@ -38,7 +38,7 @@ const HEADERS = {
 const COLUMN_ORDER = [
   { label: "Mejora Detectada", stageName: "MEJORA DETECTADA" },
   { label: "En marcha", stageName: "EN MARCHA" },
-    { label: "Esperando / Stand By", stageName: "STAND BY / DESCARTADA" },
+    { label: "Stand By / Descartada", stageName: "STAND BY / DESCARTADA" },
     { label: "Terminada", stageName: "TERMINADA" },
   ];
 
