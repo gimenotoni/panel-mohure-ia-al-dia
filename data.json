@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T04:56:24.376Z",
+  "updatedAt": "2026-09-11T05:01:34.052Z",
   "pipeline": "MOHURE - IA AL DÍA",
   "columns": [
     {
@@ -8,97 +8,97 @@
         {
           "id": "k3WHAiBhiuhNSEoHE0v6",
           "name": "M37 · Alta anual de empresas en FUNDAE",
-          "description": ""
+          "description": "Dar de alta en FUNDAE, cada enero, todas las empresas que van a bonificar formación ese año.\n\nEs un pico enorme y concentrado. Son unas doscientas empresas metidas a mano en el mismo formulario, una detrás de otra, en las primeras semanas del año.\n\nCómo se resuelve. Una skill nueva que hay que crear nosotros. El 4 de septiembre hubo una instrucción de viva voz para hacerlo, pero no quedó guardada como habilidad, y además no es la misma que la de participantes, es otro formulario y otros campos. La extensión de Claude en Chrome ya está instalada en su ordenador, así que esa parte está resuelta.\n\nSe prueba en diciembre, con tiempo. No se estrena en enero con doscientas empresas delante.\n\nCuelga de M13. Sale de la sesión con Lorena del 4 de septiembre."
         },
         {
           "id": "jzySGUToFSL992N31XZb",
           "name": "M36 · Sellado y fechado de diplomas",
-          "description": ""
+          "description": "Sellar y fechar los diplomas descargados de FUNDAE sin ir uno por uno.\n\nEs el último paso del circuito, después de firmar. Hoy Lorena se descarga los diplomas y los va sellando y poniendo la fecha a mano antes de mandarlos.\n\nCómo se resuelve. Una skill que ella invoca dándole la carpeta de diplomas ya descargados. El sellado lo tiene que hacer Lorena obligatoriamente, así que no hay diseño de vigilar una carpeta y disparar solo, eso queda descartado.\n\nEl disparador nunca puede ser la firma. Se firma dentro de FUNDAE con el certificado digital de Manu y ahí no entra ninguna IA.\n\nCuelga de M13. Sale de la sesión con Lorena del 4 de septiembre."
         },
         {
           "id": "gJWq4JctQi7TuQIBREpt",
           "name": "M35 · Conciliación del extracto bancario contra Zoho",
-          "description": ""
+          "description": "Cuadrar el extracto del banco contra las facturas pendientes de Zoho, sin hacerlo a mano con la calculadora.\n\nCuando una empresa paga varias facturas de golpe y no dice cuáles, Lorena las cuadra a mano una por una. Es el trozo que hoy le come tiempo dentro de los cobros.\n\nCómo se resuelve. Entradas, el extracto del banco que tiene Manu y el listado de facturas pendientes de Zoho, que ya trae la fecha de emisión de cada una. Salidas, una tabla de conciliación, la lista de lo que no cuadra y el borrador del correo pidiendo el desglose a quien pagó en bloque.\n\nNo es un llaverito porque no basta con decirle que se lo pregunte a Claude, hace falta criterio nuestro sobre cómo se casa cada cobro. El marcado en Zoho lo sigue haciendo ella a mano, que es la restricción que puso Manu, nada de conexión directa entre la IA y Zoho.\n\nVa de la mano de M9, la reclamación de impagos, y sale del mismo sitio, la sesión con Lorena del 4 de septiembre."
         },
         {
           "id": "sHJ0lVL8L8H3ZfsvZo8P",
           "name": "M34 · Hojas de firmas y parrillas del cierre",
-          "description": ""
+          "description": "Conseguir a tiempo las parrillas de participantes y las hojas de firmas que hacen falta para cerrar un grupo en FUNDAE.\n\nEran dos problemas y solo queda uno vivo. El de no encontrar lo que ya le habían mandado quedó resuelto el 4 de septiembre con Gemini en el correo. El que sigue es que las empresas no lo mandan, y ahí ya se probó una automatización de recordatorios que falló, porque solo una empresa de todas devolvía la parrilla rellenada. Mandar más correos automáticos es repetir el mismo experimento.\n\nLo que se cambia es el momento y el responsable.\n\n1. El momento. Hoy se pide al terminar la formación, pero al comunicar el grupo ya se tienen los datos de los participantes, así que la parrilla del cierre es en buena parte la misma información. Pedirla junto con la comunicación de inicio quita media persecución.\n\n2. El responsable. Hoy persigue Lorena, que no tiene relación con el cliente. El comercial que vendió sí la tiene, y un aviso interno a la cuenta pesa más que el quinto correo automático.\n\n3. El papel. La hoja se firma el día de la formación delante del formador, que muchas veces es Tony. Si el formador sube la foto al terminar, la persecución desaparece de raíz.\n\nCuelga de M13, que es la tarjeta madre del circuito de FUNDAE. Si al final hace falta motor de automatización, sería n8n y nunca Make, porque lo de Make está muerto y nadie lo usa."
         },
         {
           "id": "tioxaiIu2l3rCEAunm4F",
           "name": "M32 · Redacción de metodologías y materiales comerciales",
-          "description": ""
+          "description": "Redactar las metodologías de trabajo y los materiales comerciales de Mohure con la plantilla y la voz de la casa.\n\nDel correo de Carmen del 2-sep. Es hermana de la D4 (presentaciones): comparten plantilla y voz. Sin riesgo."
         },
         {
           "id": "N5lg29Qhr2ulmLmRb5LJ",
           "name": "M30 · Comunicaciones personalizadas con candidatos",
-          "description": ""
+          "description": "Escribir los mensajes a candidatos (convocatoria, seguimiento y descarte) con la voz de la casa y adaptados a cada persona.\n\nDel correo de Carmen del 2-sep. Cuidado especial con el feedback de descarte."
         },
         {
           "id": "unbCBuKqAVA8MIMPF864",
           "name": "P29 · Mapping de mercado y búsquedas en LinkedIn y bases de datos",
-          "description": ""
+          "description": "Buscar candidatos y empresas en LinkedIn y bases de datos para un proceso de selección.\n\nDel correo de Carmen del 2-sep. Es hermana de la D16, con el mismo motor y el mismo bloqueo, pero aquí los datos son de personas, así que es más delicada y va aparte. Encuadre en protección de datos antes de nada."
         },
         {
           "id": "7BtCLq1KrkmvYDdOY2MK",
           "name": "M28 · Redacción y ajuste de tono de ofertas de empleo",
-          "description": ""
+          "description": "Redactar las ofertas de empleo con la voz de Mohure y ajustarlas al puesto y al canal, a partir de la misma guía de estilo que los correos (D3).\n\nDel correo de Carmen del 2-sep. Bajo riesgo."
         },
         {
           "id": "FBwzSlejKskPJpdOkvg9",
           "name": "P16 · Prospección y búsqueda de empresas para campañas",
-          "description": ""
+          "description": "Buscar empresas que encajen con una campaña comercial y preparar el primer contacto, en vez de hacerlo a puerta fría a mano.\n\nAntes de construir nada hay que encuadrarlo en protección de datos. Es hermana de la D32 (mapping de personas en LinkedIn), que es más delicada."
         },
         {
           "id": "t5wPjNe0kU68yvQ7MQxR",
           "name": "P15 · Análisis estratégico de los datos propios (CRM y selección)",
-          "description": ""
+          "description": "Sacar de Zoho CRM y de Zoho Recruit los números que Mohure no está mirando: tiempos medios de cierre, tasas de reposición, qué clientes repiten.\n\nIncluye lo que Carmen pidió el 2-sep sobre los datos de selección (antes detección 37, fusionada aquí). Es lo que daría contenido real a una presentación de Mohure con cifras."
         },
         {
           "id": "MGcypW9qeHB5X6IIBusm",
           "name": "P14 · Zoho CRM como copiloto comercial",
-          "description": ""
+          "description": "Que el CRM avise a la comercial de qué ofrecer a cada cliente y cuándo, y actúe como un director comercial virtual.\n\nDepende de que el CRM tenga datos (D5) y se valora como proyecto aparte. Es la primera venta adicional clara del programa."
         },
         {
           "id": "kx53uWnxt2Qr3sHzaaNg",
           "name": "M11 · Asistente de elegibilidad de ayudas según la documentación",
-          "description": ""
+          "description": "Con las bases de una convocatoria y la documentación de la empresa, decir si puede optar a la ayuda y qué le falta. Siempre con una persona validando.\n\nVa después del bloque documental, porque necesita que los documentos estén ordenados."
         },
         {
           "id": "e5cqmIA6MBJAgYkTBbSy",
           "name": "P10 · Clasificación automática de la documentación que llega desordenada",
-          "description": ""
+          "description": "Ordenar los documentos que envían los clientes, descartar los que no sirven y colocar cada uno en su sitio, sin hacerlo a mano.\n\nEs una fase posterior del gestor documental, después de D7 y D8. Se valora como proyecto aparte."
         },
         {
           "id": "QoJdKL8r6bYEVWMIKBtX",
           "name": "P8 · Factura con justificante de pago y marca de subvencionable",
-          "description": ""
+          "description": "Enlazar cada factura con su justificante de pago y marcar si es subvencionable, a partir de los Excel de seguimiento y las carpetas de facturas.\n\nEs la fase 2 del gestor documental, después del estado de expediente (D7). Se valora y se factura como proyecto aparte del fijo mensual. Necesita una muestra real con el visto bueno de Manu."
         },
         {
           "id": "9HKLhk3dw6KjzmygXY6T",
           "name": "P6 · Solicitud y recepción documental al cliente",
-          "description": ""
+          "description": "Pedir al cliente la documentación que hace falta con una lista clara, recibirla y ordenarla sin hacerlo a mano cada vez.\n\nEs transversal a toda la casa (Carmen, P22 y P23) y la base sobre la que se construye el estado de expediente (D7)."
         },
         {
           "id": "RJoAonkomvRPmZXJ3ofV",
           "name": "M5 · Registro asistido de notas en Zoho CRM",
-          "description": ""
+          "description": "Dictar o pegar las notas de una llamada o reunión y que queden registradas en Zoho CRM en el contacto correcto, sin teclearlas.\n\nLo piden 4 de 6 personas en la encuesta inicial y Carmen lo confirma en la P22. Es el primer paso para que el CRM tenga datos con los que trabajar (D14 y D15)."
         },
         {
           "id": "SLtX4oa6JZ6TuhSGXLDR",
           "name": "M3 · Tono de correo de la casa",
-          "description": ""
+          "description": "Una guía de voz para que los correos que salen de Mohure suenen igual, los escriba quien los escriba, y para contestar más rápido los repetitivos.\n\nSe construye junto con la D31 (ofertas de empleo), que usa la misma guía con otro destinatario."
         },
         {
           "id": "llGBGHiUq1mBHOd5Ddir",
           "name": "M2 · Informe de selección desde la entrevista",
-          "description": ""
+          "description": "Pasar de la entrevista (transcripción o notas) al informe de valoración del candidato con la estructura de la casa, sin redactarlo desde cero.\n\nYa usan transcriptores en las entrevistas, así que la entrada está resuelta. Carmen lo pide dos veces en su correo del 2-sep: notas estructuradas y borradores de informes."
         },
         {
           "id": "bD2dNzJyy5I1lEZOWXlS",
           "name": "M4 · Presentaciones desde la propuesta (hoy con Gamma)",
-          "description": ""
+          "description": "Sacar la presentación comercial directamente de la propuesta ya escrita, en vez de rehacerla en Gamma.\n\nComparte plantilla y voz con la skill de propuestas (D1) y con la redacción de metodologías y materiales comerciales (D36). Se construye después de D1, reutilizando lo mismo."
         }
       ]
     },
@@ -108,32 +108,32 @@
         {
           "id": "T1QDpEpswnjo6qK5PZzs",
           "name": "M21 · Política de uso de IA y registro de herramientas",
-          "description": ""
+          "description": "Un documento corto que diga qué herramientas de IA se pueden usar en Mohure, con qué datos y con qué cuentas, y un registro de las que ya se usan.\n\nNo existe ninguna, lo dijo Carmen el 6 de agosto, y el plazo del reglamento europeo venció el 2 de agosto. El borrador está escrito desde el 27 de agosto con cinco puntos por confirmar. Queda hecho cuando Manu lo firme, y desbloquea la criba de CVs (M12) y los psicotécnicos (M31).\n\nLa urgencia subió el 4 de septiembre. Ese día se trabajó con nombres, DNIs, teléfonos y nivel de estudios de trabajadores de una empresa cliente, con la política todavía sin firmar. Ya vamos por detrás de los hechos, así que se manda a Tony ya, junto con el reparto de responsable y encargado del tratamiento.\n\nDentro de esta tarjeta viven ahora cinco hallazgos del registro de herramientas, que antes estaban sueltos como M22 a M26. No son mejoras que se construyan ni se cobren, son cosas que hay que anotar y decidir en el propio registro.\n\n1. Licencias sin repartir. Denisse no aparece en el reparto de Claude Team y trabaja con ChatGPT en cuenta personal. El 4 de septiembre se vio que el agujero es mayor, Lorena comparte cuenta con Carolina y la suscripción figura a nombre de Bianca, con dos organizaciones abiertas.\n\n2. ChatGPT y Gamma en cuenta única, compartida por todo el equipo y sin saber quién sube qué. Falta contar cuántos puestos hay y a nombre de quién.\n\n3. Datos personales repartidos por ordenadores individuales, Drive, Zoho, correo y archivo físico. Aquí no hay nada que preguntar, es el argumento que justifica M17. Ordenar la documentación no es estética, es cumplimiento.\n\n4. Transcriptor de entrevistas sin inventariar. Se usa en entrevistas de candidatos y no sabemos cuál es. Es la más fácil de cerrar, basta con preguntárselo a Carmen, y lleva pendiente desde el 6 de agosto.\n\n5. NotebookLM con documentación de clientes. Meten documentación de ayudas por empresa. No se toca nada hasta preguntar. El problema no es tanto el reglamento de IA como la protección de datos, quién es el encargado del tratamiento y si las condiciones de la cuenta cubren subir datos de terceros. Falta el dato que lo decide todo, si va con la cuenta de Workspace de la empresa o con cuentas sueltas.\n\nNosotros levantamos el mapa. No somos asesores jurídicos y esto lo tiene que validar su asesoría."
         },
         {
           "id": "6MCrVv9O3rM5OTfyYTuA",
           "name": "M19 · Prompt de trabajo como skill descargable con vídeo",
-          "description": ""
+          "description": "El prompt de trabajo con el que el equipo describe una tarea a Carmen se entrega como skill de Claude, con un vídeo corto de cómo instalarla y una versión pegable para quien no tenga licencia (Denisse).\n\nDecisión de Tony del 25-ago. No se pone fecha hasta tener las dos sesiones de esta semana (Lorena por un lado, Claudia y Chuse por otro), porque la skill tiene que encajar con cómo trabajan de verdad."
         },
         {
           "id": "VeRJpgNhCDQQWmQt9XBH",
           "name": "LL18 · Gemini para correos (Workspace contratado y sin usar)",
-          "description": ""
+          "description": "Mohure ya paga Google Workspace y Gemini viene incluido. Enseñar a usarlo para redactar y resumir correos, sin instalar nada.\n\nCarmen lo cuenta en la P7 y se confirmó en la llamada del 25-ago. Es un llaverito que se explica en una sesión corta."
         },
         {
           "id": "iQHe33zR7uRlzyDuYlO5",
           "name": "M17 · Carpeta local sincronizada con Drive (estructura de carpetas compartidas)",
-          "description": ""
+          "description": "Que cada persona tenga las carpetas compartidas de la empresa en su ordenador, sincronizadas con Drive, con una estructura común.\n\nEs la fase 0 del gestor documental: abarata el estado de expediente (D7) y todo lo que viene después. Lo monta Mohure, nosotros enseñamos. Se ve con Carmen el 4-sep con la estructura ya diseñada."
         },
         {
           "id": "4rXpWqLi4SyegQWYLBVx",
           "name": "M13 · Datos para formaciones FUNDAE (Adams)",
-          "description": ""
+          "description": "Preparar los datos que piden FUNDAE y Adams para las formaciones bonificadas sin volver a teclearlos.\n\nCarmen lo menciona en la P21 y la P23 como un proceso con queja. Todavía no está inventariado: hay que ver con Lorena cómo lo hace hoy."
         },
         {
           "id": "w9XkK9Ve5vafa9Ik69m2",
           "name": "M1 · Skill de propuestas (formación y selección)",
-          "description": ""
+          "description": "De la llamada o la nota de voz a la propuesta con la plantilla de la casa. Una sola skill para toda la casa, que guarda dentro los tipos de formación y selección y los datos de la empresa.\n\nLa piden 5 de 9 personas (Estela, Alicia, Carmen, Carolina y Rocío). Ya usan transcriptores, así que la entrada está resuelta.\n\nMaterial recibido el 2-sep: 4 propuestas reales de selección. Falta una muestra de formación."
         }
       ]
     },
@@ -143,7 +143,7 @@
         {
           "id": "vHTd8YNSAgZCmX4hJZ8q",
           "name": "LL33 · Claude en Chrome para FUNDAE",
-          "description": ""
+          "description": "En la reunión con Lorena detectamos que rellena mucho formulario manualmente en la web de Fundae por tanto, le instalamos la extensión de Claude en Chrome, y le rellenan los formularios de cada participante automáticamente a partir de un Excel. El comentario de Lorena fue que esto le va a cambiar la vida y le va a ayudar muchísimo porque le va a ahorrar mucho tiempo en subir cada uno de los participantes de cada una de las formaciones."
         }
       ]
     },
@@ -153,52 +153,52 @@
         {
           "id": "3bGQuCEcL8qEqPYBVYp1",
           "name": "M38 · Respuestas automáticas del chatbot de la web",
-          "description": ""
+          "description": "Que el chat de la web conteste solo las preguntas que se repiten, en lugar de tener a alguien pendiente.\n\nLo pidió Alicia. Está aquí para que quede constancia de que su petición no se ha perdido.\n\nAparcada por decisión del CEO, no nuestra. Manu la despriorizó en la misma llamada del 4 de septiembre, con dos motivos, entra poco lead por la web y Gemini en el correo puede absorber buena parte de lo que hoy llega por ahí.\n\nSe recupera cuando cambie alguna de esas dos cosas."
         },
         {
           "id": "ULZo1XcTqKVCgmfBlKSr",
           "name": "M31 · Apoyo a la interpretación de psicotécnicos y DISC",
-          "description": ""
+          "description": "Ayudar a interpretar los resultados de pruebas psicotécnicas y DISC de candidatos.\n\nDel correo de Carmen del 2-sep. Es el caso más delicado de todos: inferir personalidad es alto riesgo en el reglamento europeo, y si deriva a inferir emociones en el trabajo es práctica prohibida. Frenado hasta tener criterio jurídico y la firma de Manu en la D21."
         },
         {
           "id": "TwMB2wKXHRGt1sjeniMZ",
           "name": "M27 · Calculadora de bonificación FUNDAE integrada en la propuesta",
-          "description": ""
+          "description": "Una hoja de cálculo que calcule la bonificación FUNDAE de una formación y la meta en la propuesta.\n\nNació del correo de Carmen del 2-sep. No estaba comprometida y no adelanta a las tres prioridades del 28-ago. Necesita el visto bueno del gestor de Mohure antes de construirse."
         },
         {
           "id": "vxdw1LoThHakRRSlZRCi",
           "name": "M26 · NotebookLM con documentación de clientes (absorbida en M21)",
-          "description": ""
+          "description": "Ayudas usa NotebookLM con la documentación de las convocatorias y de las empresas cliente. Hay que revisar qué datos entran y meterlo en el registro de herramientas (D21).\n\nCarmen lo cuenta en la P7."
         },
         {
           "id": "tIGKpn2MSR6XaBaJdxEt",
           "name": "M25 · Transcriptor de entrevistas sin inventariar (absorbida en M21)",
-          "description": ""
+          "description": "Selección usa un transcriptor en las entrevistas de candidatos y no sabemos cuál es ni dónde guarda los audios.\n\nCarmen lo menciona en la P8. Hay que preguntarlo y meterlo en el registro de herramientas (D21)."
         },
         {
           "id": "3zzFLQ3ueBscWRtMdN3f",
           "name": "M24 · Datos personales en ordenadores individuales y archivo físico (absorbida en M21)",
-          "description": ""
+          "description": "Los datos de candidatos, alumnos y empresas viven repartidos entre Zoho, Drive, correo, el ordenador de cada persona y archivo físico.\n\nCarmen lo describe en la P13 y la P16. Va en el paquete normativo a Manu y se resuelve en parte con la estructura de carpetas compartidas (D17)."
         },
         {
           "id": "C8ytQ6qBdoaUE4TX2E5g",
           "name": "M23 · ChatGPT y Gamma en cuenta única compartida (absorbida en M21)",
-          "description": ""
+          "description": "Todo el equipo usa la misma cuenta de ChatGPT y la misma de Gamma, sin saber quién sube qué. Hay que pasar a cuentas por persona o limitar qué datos entran.\n\nLo cuenta Carmen en la P2. Va en el paquete normativo a Manu junto con la D24."
         },
         {
           "id": "ACLrgqHbpndLHde7TWK3",
           "name": "M22 · Denisse sin licencia de IA y con ChatGPT personal (absorbida en M21)",
-          "description": ""
+          "description": "Denisse no aparece en el reparto de licencias de Claude y trabaja con un ChatGPT personal. Hay que darle una cuenta de empresa o dejarla fuera de las herramientas con datos.\n\nSalió en la encuesta inicial y se confirmó en la llamada del 25-ago. Se habla primero con Carmen y después con Manu."
         },
         {
           "id": "LQO1WzZb9qfv0ef9RfT8",
           "name": "LL20 · Llaveritos para Manu",
-          "description": ""
+          "description": "Que Manu rellene el formulario inicial y sacar de ahí dos o tres trucos para su día a día. Deja de ser un hueco del censo y pasa a ser una oportunidad.\n\nIdea de JC del 11-ago. Cuando Manu quiera."
         },
         {
           "id": "62TRP65ymDxFOpZPGXYD",
           "name": "M12 · Criba de CVs con supervisión humana",
-          "description": ""
+          "description": "Hacer una primera criba de currículos contra los requisitos de la oferta, dejando la decisión a la persona.\n\nEs un caso de alto riesgo en el reglamento europeo de IA: espera a que Manu firme la política de uso de IA (D21). Después se mira si se hace dentro de Zoho Recruit."
         }
       ]
     }
