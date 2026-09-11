@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T05:30:05.652Z",
+  "updatedAt": "2026-09-11T06:20:29.417Z",
   "pipeline": "MOHURE - IA AL DÍA",
   "columns": [
     {
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "label": "Esperando / Stand By",
+      "label": "Stand By / Descartada",
       "opportunities": [
         {
           "id": "3bGQuCEcL8qEqPYBVYp1",
