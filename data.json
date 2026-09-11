@@ -1,0 +1,10 @@
+{
+    "updatedAt": null,
+    "pipeline": "MOHURE - IA AL DÍA",
+    "columns": [
+          { "label": "Mejora Detectada", "opportunities": [] },
+          { "label": "En marcha", "opportunities": [] },
+          { "label": "Terminada", "opportunities": [] },
+          { "label": "Esperando / Stand By", "opportunities": [] }
+    ]
+}
