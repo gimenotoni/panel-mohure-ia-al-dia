@@ -1,10 +1,206 @@
 {
-    "updatedAt": null,
-    "pipeline": "MOHURE - IA AL DÍA",
-    "columns": [
-          { "label": "Mejora Detectada", "opportunities": [] },
-          { "label": "En marcha", "opportunities": [] },
-          { "label": "Terminada", "opportunities": [] },
-          { "label": "Esperando / Stand By", "opportunities": [] }
-    ]
+  "updatedAt": "2026-09-11T04:46:11.080Z",
+  "pipeline": "MOHURE - IA AL DÍA",
+  "columns": [
+    {
+      "label": "Mejora Detectada",
+      "opportunities": [
+        {
+          "id": "k3WHAiBhiuhNSEoHE0v6",
+          "name": "M37 · Alta anual de empresas en FUNDAE",
+          "description": ""
+        },
+        {
+          "id": "jzySGUToFSL992N31XZb",
+          "name": "M36 · Sellado y fechado de diplomas",
+          "description": ""
+        },
+        {
+          "id": "gJWq4JctQi7TuQIBREpt",
+          "name": "M35 · Conciliación del extracto bancario contra Zoho",
+          "description": ""
+        },
+        {
+          "id": "sHJ0lVL8L8H3ZfsvZo8P",
+          "name": "M34 · Hojas de firmas y parrillas del cierre",
+          "description": ""
+        },
+        {
+          "id": "tioxaiIu2l3rCEAunm4F",
+          "name": "M32 · Redacción de metodologías y materiales comerciales",
+          "description": ""
+        },
+        {
+          "id": "N5lg29Qhr2ulmLmRb5LJ",
+          "name": "M30 · Comunicaciones personalizadas con candidatos",
+          "description": ""
+        },
+        {
+          "id": "unbCBuKqAVA8MIMPF864",
+          "name": "P29 · Mapping de mercado y búsquedas en LinkedIn y bases de datos",
+          "description": ""
+        },
+        {
+          "id": "7BtCLq1KrkmvYDdOY2MK",
+          "name": "M28 · Redacción y ajuste de tono de ofertas de empleo",
+          "description": ""
+        },
+        {
+          "id": "FBwzSlejKskPJpdOkvg9",
+          "name": "P16 · Prospección y búsqueda de empresas para campañas",
+          "description": ""
+        },
+        {
+          "id": "t5wPjNe0kU68yvQ7MQxR",
+          "name": "P15 · Análisis estratégico de los datos propios (CRM y selección)",
+          "description": ""
+        },
+        {
+          "id": "MGcypW9qeHB5X6IIBusm",
+          "name": "P14 · Zoho CRM como copiloto comercial",
+          "description": ""
+        },
+        {
+          "id": "kx53uWnxt2Qr3sHzaaNg",
+          "name": "M11 · Asistente de elegibilidad de ayudas según la documentación",
+          "description": ""
+        },
+        {
+          "id": "e5cqmIA6MBJAgYkTBbSy",
+          "name": "P10 · Clasificación automática de la documentación que llega desordenada",
+          "description": ""
+        },
+        {
+          "id": "QoJdKL8r6bYEVWMIKBtX",
+          "name": "P8 · Factura con justificante de pago y marca de subvencionable",
+          "description": ""
+        },
+        {
+          "id": "9HKLhk3dw6KjzmygXY6T",
+          "name": "P6 · Solicitud y recepción documental al cliente",
+          "description": ""
+        },
+        {
+          "id": "RJoAonkomvRPmZXJ3ofV",
+          "name": "M5 · Registro asistido de notas en Zoho CRM",
+          "description": ""
+        },
+        {
+          "id": "SLtX4oa6JZ6TuhSGXLDR",
+          "name": "M3 · Tono de correo de la casa",
+          "description": ""
+        },
+        {
+          "id": "llGBGHiUq1mBHOd5Ddir",
+          "name": "M2 · Informe de selección desde la entrevista",
+          "description": ""
+        },
+        {
+          "id": "bD2dNzJyy5I1lEZOWXlS",
+          "name": "M4 · Presentaciones desde la propuesta (hoy con Gamma)",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "En marcha",
+      "opportunities": [
+        {
+          "id": "T1QDpEpswnjo6qK5PZzs",
+          "name": "M21 · Política de uso de IA y registro de herramientas",
+          "description": ""
+        },
+        {
+          "id": "6MCrVv9O3rM5OTfyYTuA",
+          "name": "M19 · Prompt de trabajo como skill descargable con vídeo",
+          "description": ""
+        },
+        {
+          "id": "VeRJpgNhCDQQWmQt9XBH",
+          "name": "LL18 · Gemini para correos (Workspace contratado y sin usar)",
+          "description": ""
+        },
+        {
+          "id": "iQHe33zR7uRlzyDuYlO5",
+          "name": "M17 · Carpeta local sincronizada con Drive (estructura de carpetas compartidas)",
+          "description": ""
+        },
+        {
+          "id": "4rXpWqLi4SyegQWYLBVx",
+          "name": "M13 · Datos para formaciones FUNDAE (Adams)",
+          "description": ""
+        },
+        {
+          "id": "w9XkK9Ve5vafa9Ik69m2",
+          "name": "M1 · Skill de propuestas (formación y selección)",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "Terminada",
+      "opportunities": [
+        {
+          "id": "vHTd8YNSAgZCmX4hJZ8q",
+          "name": "LL33 · Claude en Chrome para FUNDAE",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "label": "Esperando / Stand By",
+      "opportunities": [
+        {
+          "id": "3bGQuCEcL8qEqPYBVYp1",
+          "name": "M38 · Respuestas automáticas del chatbot de la web",
+          "description": ""
+        },
+        {
+          "id": "ULZo1XcTqKVCgmfBlKSr",
+          "name": "M31 · Apoyo a la interpretación de psicotécnicos y DISC",
+          "description": ""
+        },
+        {
+          "id": "TwMB2wKXHRGt1sjeniMZ",
+          "name": "M27 · Calculadora de bonificación FUNDAE integrada en la propuesta",
+          "description": ""
+        },
+        {
+          "id": "vxdw1LoThHakRRSlZRCi",
+          "name": "M26 · NotebookLM con documentación de clientes (absorbida en M21)",
+          "description": ""
+        },
+        {
+          "id": "tIGKpn2MSR6XaBaJdxEt",
+          "name": "M25 · Transcriptor de entrevistas sin inventariar (absorbida en M21)",
+          "description": ""
+        },
+        {
+          "id": "3zzFLQ3ueBscWRtMdN3f",
+          "name": "M24 · Datos personales en ordenadores individuales y archivo físico (absorbida en M21)",
+          "description": ""
+        },
+        {
+          "id": "C8ytQ6qBdoaUE4TX2E5g",
+          "name": "M23 · ChatGPT y Gamma en cuenta única compartida (absorbida en M21)",
+          "description": ""
+        },
+        {
+          "id": "ACLrgqHbpndLHde7TWK3",
+          "name": "M22 · Denisse sin licencia de IA y con ChatGPT personal (absorbida en M21)",
+          "description": ""
+        },
+        {
+          "id": "LQO1WzZb9qfv0ef9RfT8",
+          "name": "LL20 · Llaveritos para Manu",
+          "description": ""
+        },
+        {
+          "id": "62TRP65ymDxFOpZPGXYD",
+          "name": "M12 · Criba de CVs con supervisión humana",
+          "description": ""
+        }
+      ]
+    }
+  ]
 }
