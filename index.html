@@ -6,369 +6,386 @@
 <title>MOHURE - IA AL DÍA · Panel de oportunidades</title>
 <style>
 :root {
-  --bg: #f4f5f7;
-  --panel-bg: #ffffff;
-  --column-bg: #eef0f4;
-  --text: #172b4d;
-  --text-muted: #5e6c84;
-  --border: #dfe1e6;
-  --card-shadow: 0 1px 2px rgba(9, 30, 66, 0.15), 0 1px 1px rgba(9, 30, 66, 0.1);
-  --accent-1: #0079bf;
-  --accent-2: #61bd4f;
-  --accent-3: #00875a;
-  --accent-4: #ff9f1a;
-  --brand-1: #6c5ce7;
-  --brand-2: #341f97;
-  --danger: #de350b;
-  --danger-bg: #ffebe6;
-  --pill-bg: #eef0f4;
-  --pill-active-bg: #172b4d;
-  --pill-active-text: #ffffff;
+--bg: #f4f5f7;
+--panel-bg: #ffffff;
+--column-bg: #eef0f4;
+--text: #172b4d;
+--text-muted: #5e6c84;
+--border: #dfe1e6;
+--card-shadow: 0 1px 2px rgba(9, 30, 66, 0.15), 0 1px 1px rgba(9, 30, 66, 0.1);
+--accent-1: #0079bf;
+--accent-2: #61bd4f;
+--accent-3: #00875a;
+--accent-4: #ff9f1a;
+--brand-1: #6c5ce7;
+--brand-2: #341f97;
+--danger: #de350b;
+--danger-bg: #ffebe6;
+--pill-bg: #eef0f4;
+--pill-active-bg: #172b4d;
+--pill-active-text: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0d1117;
-    --panel-bg: #161b22;
-    --column-bg: #1c2128;
-    --text: #e6edf3;
-    --text-muted: #8b949e;
-    --border: #30363d;
-    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --danger: #ff9d8a;
-    --danger-bg: #3d1f1c;
-    --pill-bg: #21262d;
-    --pill-active-bg: #e6edf3;
-    --pill-active-text: #0d1117;
-  }
+:root {
+--bg: #0d1117;
+--panel-bg: #161b22;
+--column-bg: #1c2128;
+--text: #e6edf3;
+--text-muted: #8b949e;
+--border: #30363d;
+--card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+--danger: #ff9d8a;
+--danger-bg: #3d1f1c;
+--pill-bg: #21262d;
+--pill-active-bg: #e6edf3;
+--pill-active-text: #0d1117;
+}
 }
 * { box-sizing: border-box; }
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+margin: 0;
+background: var(--bg);
+color: var(--text);
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 .topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 24px;
-  gap: 16px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid var(--border);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 18px 24px;
+gap: 16px;
+flex-wrap: wrap;
+border-bottom: 1px solid var(--border);
 }
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+display: flex;
+align-items: center;
+gap: 12px;
 }
 .logo {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+width: 42px;
+height: 42px;
+border-radius: 50%;
+background: #0f172a;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
 }
 .logo-inner {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--brand-1), #38bdf8);
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(--brand-1), #38bdf8);
 }
 .brand-text h1 {
-  margin: 0;
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  line-height: 1.2;
+margin: 0;
+font-size: 19px;
+font-weight: 800;
+letter-spacing: 0.2px;
+line-height: 1.2;
 }
 .brand-text p {
-  margin: 2px 0 0;
-  font-size: 12.5px;
-  color: var(--text-muted);
+margin: 2px 0 0;
+font-size: 12.5px;
+color: var(--text-muted);
 }
 .header-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
+display: flex;
+align-items: center;
+gap: 16px;
+flex-wrap: wrap;
 }
 .stats-text {
-  text-align: right;
+text-align: right;
 }
 .stats-text .count {
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
+font-size: 19px;
+font-weight: 800;
+letter-spacing: 0.2px;
 }
 .stats-text .updated {
-  margin-top: 1px;
-  font-size: 12px;
-  color: var(--text-muted);
+margin-top: 1px;
+font-size: 12px;
+color: var(--text-muted);
 }
 .live-badge {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(54, 179, 126, 0.14);
-  color: #1a7f5a;
-  padding: 7px 14px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 700;
-  white-space: nowrap;
+display: flex;
+align-items: center;
+gap: 6px;
+background: rgba(54, 179, 126, 0.14);
+color: #1a7f5a;
+padding: 7px 14px;
+border-radius: 999px;
+font-size: 12.5px;
+font-weight: 700;
+white-space: nowrap;
 }
 @media (prefers-color-scheme: dark) {
-  .live-badge { color: #4ade80; }
+.live-badge { color: #4ade80; }
 }
 .live-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #36b37e;
-  box-shadow: 0 0 0 0 rgba(54, 179, 126, 0.6);
-  animation: pulse 1.8s infinite;
-  flex-shrink: 0;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: #36b37e;
+box-shadow: 0 0 0 0 rgba(54, 179, 126, 0.6);
+animation: pulse 1.8s infinite;
+flex-shrink: 0;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(54, 179, 126, 0.6); }
-  70% { box-shadow: 0 0 0 6px rgba(54, 179, 126, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(54, 179, 126, 0); }
+0% { box-shadow: 0 0 0 0 rgba(54, 179, 126, 0.6); }
+70% { box-shadow: 0 0 0 6px rgba(54, 179, 126, 0); }
+100% { box-shadow: 0 0 0 0 rgba(54, 179, 126, 0); }
 }
 .refresh-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: #0f172a;
-  color: #fff;
-  font-size: 17px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: none;
+background: #0f172a;
+color: #fff;
+font-size: 17px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
 }
 .refresh-btn:hover { opacity: 0.85; }
 .refresh-btn.spinning .refresh-icon { display: inline-block; animation: spin 0.7s linear; }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 .controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 24px;
-  flex-wrap: wrap;
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 16px 24px;
+flex-wrap: wrap;
 }
 .search-wrap {
-  position: relative;
-  flex: 1 1 260px;
-  min-width: 220px;
-  max-width: 420px;
+position: relative;
+flex: 1 1 260px;
+min-width: 220px;
+max-width: 420px;
 }
 .search-icon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 13px;
-  opacity: 0.6;
-  pointer-events: none;
+position: absolute;
+left: 12px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 13px;
+opacity: 0.6;
+pointer-events: none;
 }
 #searchInput {
-  width: 100%;
-  padding: 9px 12px 9px 32px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--panel-bg);
-  color: var(--text);
-  font-size: 13px;
+width: 100%;
+padding: 9px 12px 9px 32px;
+border-radius: 8px;
+border: 1px solid var(--border);
+background: var(--panel-bg);
+color: var(--text);
+font-size: 13px;
 }
 #searchInput:focus {
-  outline: none;
-  border-color: var(--brand-1);
+outline: none;
+border-color: var(--brand-1);
 }
 .filters {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
 }
 .pill {
-  border: 1px solid var(--border);
-  background: var(--pill-bg);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 7px 14px;
-  font-size: 12.5px;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
+border: 1px solid var(--border);
+background: var(--pill-bg);
+color: var(--text);
+border-radius: 999px;
+padding: 7px 14px;
+font-size: 12.5px;
+font-weight: 600;
+cursor: pointer;
+white-space: nowrap;
 }
 .pill.active {
-  background: var(--pill-active-bg);
-  color: var(--pill-active-text);
-  border-color: var(--pill-active-bg);
+background: var(--pill-active-bg);
+color: var(--pill-active-text);
+border-color: var(--pill-active-bg);
 }
 .visible-count {
-  margin-left: auto;
-  font-size: 12.5px;
-  color: var(--text-muted);
-  white-space: nowrap;
+margin-left: auto;
+font-size: 12.5px;
+color: var(--text-muted);
+white-space: nowrap;
 }
 .visible-count span { font-weight: 700; color: var(--text); }
 
 #board {
-  display: flex;
-  gap: 16px;
-  padding: 0 24px 24px;
-  overflow-x: auto;
-  align-items: flex-start;
+display: flex;
+gap: 16px;
+padding: 0 24px 24px;
+overflow-x: auto;
+align-items: flex-start;
 }
 .column {
-  background: var(--column-bg);
-  border-radius: 10px;
-  min-width: 280px;
-  max-width: 320px;
-  flex: 1 1 280px;
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100vh - 210px);
+background: var(--column-bg);
+border-radius: 10px;
+min-width: 280px;
+max-width: 320px;
+flex: 1 1 280px;
+display: flex;
+flex-direction: column;
+max-height: calc(100vh - 210px);
 }
 .column-header {
-  padding: 14px 14px 10px;
-  font-weight: 700;
-  font-size: 12.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+padding: 14px 14px 10px;
+font-weight: 700;
+font-size: 12.5px;
+text-transform: uppercase;
+letter-spacing: 0.4px;
+display: flex;
+align-items: center;
+gap: 8px;
 }
 .column-header .dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  flex-shrink: 0;
+width: 9px;
+height: 9px;
+border-radius: 50%;
+flex-shrink: 0;
 }
 .column[data-col="0"] .dot { background: var(--accent-1); }
 .column[data-col="1"] .dot { background: #2dd4a7; }
 .column[data-col="2"] .dot { background: #172b4d; }
 .column[data-col="3"] .dot { background: #3b5bfd; }
 .column-count {
-  margin-left: auto;
-  font-weight: 700;
-  color: var(--text-muted);
-  font-size: 11px;
-  background: var(--panel-bg);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  text-transform: none;
-  letter-spacing: normal;
+margin-left: auto;
+font-weight: 700;
+color: var(--text-muted);
+font-size: 11px;
+background: var(--panel-bg);
+border: 1px solid var(--border);
+border-radius: 50%;
+width: 22px;
+height: 22px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+text-transform: none;
+letter-spacing: normal;
 }
 .cards {
-  padding: 0 10px 10px;
-  overflow-y: auto;
+padding: 0 10px 10px;
+overflow-y: auto;
 }
 .card {
-  background: var(--panel-bg);
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin-bottom: 8px;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--border);
+background: var(--panel-bg);
+border-radius: 8px;
+padding: 10px 12px;
+margin-bottom: 8px;
+border: 1px solid var(--border);
+border-left: 3px solid var(--border);
 }
 .column[data-col="0"] .card { border-left-color: var(--accent-1); }
 .column[data-col="1"] .card { border-left-color: #2dd4a7; }
 .column[data-col="2"] .card { border-left-color: #172b4d; }
 .column[data-col="3"] .card { border-left-color: #3b5bfd; }
 .card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 4px;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 8px;
+margin-bottom: 4px;
 }
 .card-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0;
+font-size: 14px;
+font-weight: 600;
+margin: 0;
 }
 .badge-alta {
-  flex-shrink: 0;
-  background: var(--danger-bg);
-  color: var(--danger);
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  border-radius: 999px;
-  padding: 2px 8px;
-  white-space: nowrap;
+flex-shrink: 0;
+background: var(--danger-bg);
+color: var(--danger);
+font-size: 10.5px;
+font-weight: 700;
+letter-spacing: 0.3px;
+border-radius: 999px;
+padding: 2px 8px;
+white-space: nowrap;
 }
 .card-desc {
-  font-size: 12.5px;
-  color: var(--text-muted);
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+font-size: 12.5px;
+color: var(--text-muted);
+margin: 0;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden;
 }
+.card-desc.expanded {
+display: block;
+-webkit-line-clamp: unset;
+overflow: visible;
+}
+.card-more {
+display: none;
+margin-top: 4px;
+background: none;
+border: none;
+padding: 0;
+font-size: 11.5px;
+font-weight: 700;
+color: var(--brand-1);
+cursor: pointer;
+}
+.card-more:hover { text-decoration: underline; }
 .empty {
-  padding: 20px 12px;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 13px;
+padding: 20px 12px;
+text-align: center;
+color: var(--text-muted);
+font-size: 13px;
 }
 #error {
-  display: none;
-  margin: 0 24px 16px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  background: var(--danger-bg);
-  color: var(--danger);
-  font-size: 13px;
+display: none;
+margin: 0 24px 16px;
+padding: 12px 16px;
+border-radius: 8px;
+background: var(--danger-bg);
+color: var(--danger);
+font-size: 13px;
 }
 </style>
 </head>
 <body>
 <div class="topbar">
-  <div class="brand">
-    <div class="logo"><span class="logo-inner"></span></div>
-    <div class="brand-text">
-      <h1>MOHURE · IA AL DÍA</h1>
-      <p>Panel de oportunidades · Never Work Systems</p>
-    </div>
-  </div>
-  <div class="header-right">
-    <div class="stats-text">
-      <div class="count"><span id="oppCount">0</span> OPORTUNIDADES</div>
-      <div class="updated">Actualizado <span id="updatedTime">--:--:--</span></div>
-    </div>
-    <div class="live-badge"><span class="live-dot"></span> En vivo</div>
-    <button id="refreshBtn" class="refresh-btn" title="Actualizar ahora"><span class="refresh-icon">⟳</span></button>
-  </div>
+<div class="brand">
+<div class="logo"><span class="logo-inner"></span></div>
+<div class="brand-text">
+<h1>MOHURE · IA AL DÍA</h1>
+<p>Panel de oportunidades · Never Work Systems</p>
+</div>
+</div>
+<div class="header-right">
+<div class="stats-text">
+<div class="count"><span id="oppCount">0</span> OPORTUNIDADES</div>
+<div class="updated">Actualizado <span id="updatedTime">--:--:--</span></div>
+</div>
+<div class="live-badge"><span class="live-dot"></span> En vivo</div>
+<button id="refreshBtn" class="refresh-btn" title="Actualizar ahora"><span class="refresh-icon">⟳</span></button>
+</div>
 </div>
 
 <div class="controls">
-  <div class="search-wrap">
-    <span class="search-icon">&#128269;</span>
-    <input id="searchInput" type="text" placeholder="Buscar por nombre o descripción..." />
-  </div>
-  <div class="filters" id="filters">
-    <button class="pill active" data-filter="all">Todas</button>
-    <button class="pill" data-filter="alta">Prioridad Alta</button>
-    <button class="pill" data-filter="none">Sin prioridad</button>
-  </div>
-  <div class="visible-count"><span id="visibleCount">0</span> visibles</div>
+<div class="search-wrap">
+<span class="search-icon">&#128269;</span>
+<input id="searchInput" type="text" placeholder="Buscar por nombre o descripción..." />
+</div>
+<div class="filters" id="filters">
+<button class="pill active" data-filter="all">Todas</button>
+<button class="pill" data-filter="alta">Prioridad Alta</button>
+<button class="pill" data-filter="none">Sin prioridad</button>
+</div>
+<div class="visible-count"><span id="visibleCount">0</span> visibles</div>
 </div>
 
 <div id="error"></div>
@@ -389,124 +406,148 @@ let currentFilter = "all";
 let currentSearch = "";
 
 function formatTime(iso) {
-  if (!iso) return "--:--:--";
-  const d = new Date(iso);
-  return d.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+if (!iso) return "--:--:--";
+const d = new Date(iso);
+return d.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
 }
 
 function isAlta(priority) {
-  return !!priority && priority.trim().toLowerCase().includes("alta");
+return !!priority && priority.trim().toLowerCase().includes("alta");
 }
 
 function matchesFilter(opp) {
-  if (currentFilter === "alta") return isAlta(opp.priority);
-  if (currentFilter === "none") return !opp.priority || !opp.priority.trim();
-  return true;
+if (currentFilter === "alta") return isAlta(opp.priority);
+if (currentFilter === "none") return !opp.priority || !opp.priority.trim();
+return true;
 }
 
 function matchesSearch(opp) {
-  if (!currentSearch) return true;
-  const q = currentSearch.toLowerCase();
-  return (
-    (opp.name || "").toLowerCase().includes(q) ||
-    (opp.description || "").toLowerCase().includes(q)
-  );
+if (!currentSearch) return true;
+const q = currentSearch.toLowerCase();
+return (
+(opp.name || "").toLowerCase().includes(q) ||
+(opp.description || "").toLowerCase().includes(q)
+);
 }
 
 function render() {
-  if (!rawData) return;
-  boardEl.innerHTML = "";
-  let totalVisible = 0;
-  const totalAll = (rawData.columns || []).reduce((sum, c) => sum + c.opportunities.length, 0);
+if (!rawData) return;
+boardEl.innerHTML = "";
+let totalVisible = 0;
+const totalAll = (rawData.columns || []).reduce((sum, c) => sum + c.opportunities.length, 0);
 
-  (rawData.columns || []).forEach((col, colIdx) => {
-    const filtered = col.opportunities.filter((opp) => matchesFilter(opp) && matchesSearch(opp));
-    totalVisible += filtered.length;
+(rawData.columns || []).forEach((col, colIdx) => {
+const filtered = col.opportunities.filter((opp) => matchesFilter(opp) && matchesSearch(opp));
+totalVisible += filtered.length;
 
-    const column = document.createElement("div");
-    column.className = "column";
-    column.dataset.col = colIdx;
+const column = document.createElement("div");
+column.className = "column";
+column.dataset.col = colIdx;
 
-    const header = document.createElement("div");
-    header.className = "column-header";
-    header.innerHTML = `<span class="dot"></span><span>${col.label}</span><span class="column-count">${filtered.length}</span>`;
-    column.appendChild(header);
+const header = document.createElement("div");
+header.className = "column-header";
+header.innerHTML = `<span class="dot"></span><span>${col.label}</span><span class="column-count">${filtered.length}</span>`;
+column.appendChild(header);
 
-    const cardsWrap = document.createElement("div");
-    cardsWrap.className = "cards";
+const cardsWrap = document.createElement("div");
+cardsWrap.className = "cards";
 
-    if (!filtered.length) {
-      const empty = document.createElement("div");
-      empty.className = "empty";
-      empty.textContent = "Sin oportunidades";
-      cardsWrap.appendChild(empty);
-    } else {
-      filtered.forEach((opp) => {
-        const card = document.createElement("div");
-        card.className = "card";
+if (!filtered.length) {
+const empty = document.createElement("div");
+empty.className = "empty";
+empty.textContent = "Sin oportunidades";
+cardsWrap.appendChild(empty);
+} else {
+filtered.forEach((opp) => {
+const card = document.createElement("div");
+card.className = "card";
 
-        const top = document.createElement("div");
-        top.className = "card-top";
-        const title = document.createElement("p");
-        title.className = "card-title";
-        title.textContent = opp.name;
-        top.appendChild(title);
-        if (isAlta(opp.priority)) {
-          const badge = document.createElement("span");
-          badge.className = "badge-alta";
-          badge.textContent = "ALTA";
-          top.appendChild(badge);
-        }
-        card.appendChild(top);
+const top = document.createElement("div");
+top.className = "card-top";
+const title = document.createElement("p");
+title.className = "card-title";
+title.textContent = opp.name;
+top.appendChild(title);
+if (isAlta(opp.priority)) {
+const badge = document.createElement("span");
+badge.className = "badge-alta";
+badge.textContent = "ALTA";
+top.appendChild(badge);
+}
+card.appendChild(top);
 
-        if (opp.description) {
-          const desc = document.createElement("p");
-          desc.className = "card-desc";
-          desc.textContent = opp.description;
-          card.appendChild(desc);
-        }
-        cardsWrap.appendChild(card);
-      });
-    }
+if (opp.description) {
+const desc = document.createElement("p");
+desc.className = "card-desc";
+desc.textContent = opp.description;
+card.appendChild(desc);
 
-    column.appendChild(cardsWrap);
-    boardEl.appendChild(column);
-  });
+const moreBtn = document.createElement("button");
+moreBtn.type = "button";
+moreBtn.className = "card-more";
+moreBtn.textContent = "Ver más";
+card.appendChild(moreBtn);
+}
+cardsWrap.appendChild(card);
+});
+}
 
-  oppCountEl.textContent = totalAll;
-  visibleCountEl.textContent = totalVisible;
+column.appendChild(cardsWrap);
+boardEl.appendChild(column);
+});
+
+oppCountEl.textContent = totalAll;
+visibleCountEl.textContent = totalVisible;
+
+requestAnimationFrame(() => {
+boardEl.querySelectorAll(".card-desc").forEach((desc) => {
+const btn = desc.nextElementSibling;
+if (!btn || !btn.classList.contains("card-more")) return;
+const isTruncated = desc.scrollHeight - desc.clientHeight > 1;
+btn.style.display = isTruncated ? "inline-block" : "none";
+});
+});
 }
 
 async function loadData() {
-  refreshBtn.classList.add("spinning");
-  try {
-    const res = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" });
-    if (!res.ok) throw new Error(`No se pudo cargar data.json (HTTP ${res.status})`);
-    const data = await res.json();
-    rawData = data;
-    render();
-    updatedTimeEl.textContent = formatTime(data.updatedAt || new Date().toISOString());
-    errorEl.style.display = "none";
-  } catch (err) {
-    errorEl.textContent = `Error cargando datos: ${err.message}`;
-    errorEl.style.display = "block";
-  } finally {
-    setTimeout(() => refreshBtn.classList.remove("spinning"), 700);
-  }
+refreshBtn.classList.add("spinning");
+try {
+const res = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" });
+if (!res.ok) throw new Error(`No se pudo cargar data.json (HTTP ${res.status})`);
+const data = await res.json();
+rawData = data;
+render();
+updatedTimeEl.textContent = formatTime(data.updatedAt || new Date().toISOString());
+errorEl.style.display = "none";
+} catch (err) {
+errorEl.textContent = `Error cargando datos: ${err.message}`;
+errorEl.style.display = "block";
+} finally {
+setTimeout(() => refreshBtn.classList.remove("spinning"), 700);
+}
 }
 
 filtersEl.addEventListener("click", (e) => {
-  const btn = e.target.closest(".pill");
-  if (!btn) return;
-  filtersEl.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
-  btn.classList.add("active");
-  currentFilter = btn.dataset.filter;
-  render();
+const btn = e.target.closest(".pill");
+if (!btn) return;
+filtersEl.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
+btn.classList.add("active");
+currentFilter = btn.dataset.filter;
+render();
 });
 
 searchInput.addEventListener("input", (e) => {
-  currentSearch = e.target.value.trim();
-  render();
+currentSearch = e.target.value.trim();
+render();
+});
+
+boardEl.addEventListener("click", (e) => {
+const btn = e.target.closest(".card-more");
+if (!btn) return;
+const desc = btn.previousElementSibling;
+if (!desc) return;
+const expanded = desc.classList.toggle("expanded");
+btn.textContent = expanded ? "Ver menos" : "Ver más";
 });
 
 refreshBtn.addEventListener("click", loadData);
