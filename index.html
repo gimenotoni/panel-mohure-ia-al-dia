@@ -52,9 +52,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px 8px;
+  padding: 18px 24px;
   gap: 16px;
   flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
 }
 .brand {
   display: flex;
@@ -62,21 +63,26 @@ body {
   gap: 12px;
 }
 .logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--brand-1), var(--brand-2));
-  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 18px;
   flex-shrink: 0;
+}
+.logo-inner {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-1), #38bdf8);
 }
 .brand-text h1 {
   margin: 0;
-  font-size: 18px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
   line-height: 1.2;
 }
 .brand-text p {
@@ -84,43 +90,39 @@ body {
   font-size: 12.5px;
   color: var(--text-muted);
 }
-.refresh-btn {
-  border: 1px solid var(--border);
-  background: var(--panel-bg);
-  color: var(--text);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
+.header-right {
   display: flex;
   align-items: center;
-  gap: 6px;
-}
-.refresh-btn:hover { border-color: var(--brand-1); color: var(--brand-1); }
-.refresh-btn.spinning .refresh-icon { animation: spin 0.7s linear; }
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-.stats-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding: 4px 24px 14px;
+  gap: 16px;
   flex-wrap: wrap;
-  gap: 8px;
 }
-.stat-main {
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
+.stats-text {
+  text-align: right;
 }
-.stat-main span { color: var(--brand-1); }
-.stat-sub {
-  font-size: 12.5px;
+.stats-text .count {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+.stats-text .updated {
+  margin-top: 1px;
+  font-size: 12px;
   color: var(--text-muted);
+}
+.live-badge {
   display: flex;
   align-items: center;
   gap: 6px;
+  background: rgba(54, 179, 126, 0.14);
+  color: #1a7f5a;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) {
+  .live-badge { color: #4ade80; }
 }
 .live-dot {
   width: 8px;
@@ -136,12 +138,29 @@ body {
   70% { box-shadow: 0 0 0 6px rgba(54, 179, 126, 0); }
   100% { box-shadow: 0 0 0 0 rgba(54, 179, 126, 0); }
 }
+.refresh-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #0f172a;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.refresh-btn:hover { opacity: 0.85; }
+.refresh-btn.spinning .refresh-icon { display: inline-block; animation: spin 0.7s linear; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 .controls {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 0 24px 16px;
+  padding: 16px 24px;
   flex-wrap: wrap;
 }
 .search-wrap {
@@ -219,32 +238,41 @@ body {
   max-height: calc(100vh - 210px);
 }
 .column-header {
-  padding: 12px 14px 8px;
-  font-weight: 600;
-  font-size: 14px;
+  padding: 14px 14px 10px;
+  font-weight: 700;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 .column-header .dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 .column[data-col="0"] .dot { background: var(--accent-1); }
-.column[data-col="1"] .dot { background: var(--accent-4); }
-.column[data-col="2"] .dot { background: #6b778c; }
-.column[data-col="3"] .dot { background: var(--accent-3); }
+.column[data-col="1"] .dot { background: #2dd4a7; }
+.column[data-col="2"] .dot { background: #172b4d; }
+.column[data-col="3"] .dot { background: #3b5bfd; }
 .column-count {
   margin-left: auto;
   font-weight: 700;
   color: var(--text-muted);
-  font-size: 11.5px;
+  font-size: 11px;
   background: var(--panel-bg);
   border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 1px 8px;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-transform: none;
+  letter-spacing: normal;
 }
 .cards {
   padding: 0 10px 10px;
@@ -255,9 +283,13 @@ body {
   border-radius: 8px;
   padding: 10px 12px;
   margin-bottom: 8px;
-  box-shadow: var(--card-shadow);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
 }
+.column[data-col="0"] .card { border-left-color: var(--accent-1); }
+.column[data-col="1"] .card { border-left-color: #2dd4a7; }
+.column[data-col="2"] .card { border-left-color: #172b4d; }
+.column[data-col="3"] .card { border-left-color: #3b5bfd; }
 .card-top {
   display: flex;
   align-items: flex-start;
@@ -310,18 +342,20 @@ body {
 <body>
 <div class="topbar">
   <div class="brand">
-    <div class="logo">M</div>
+    <div class="logo"><span class="logo-inner"></span></div>
     <div class="brand-text">
       <h1>MOHURE · IA AL DÍA</h1>
-      <p>Panel de oportunidades en vivo</p>
+      <p>Panel de oportunidades · Never Work Systems</p>
     </div>
   </div>
-  <button id="refreshBtn" class="refresh-btn"><span class="refresh-icon">⟳</span> Actualizar</button>
-</div>
-
-<div class="stats-row">
-  <div class="stat-main"><span id="oppCount">0</span> OPORTUNIDADES</div>
-  <div class="stat-sub"><span class="live-dot"></span> En vivo · Actualizado <span id="updatedTime">--:--:--</span></div>
+  <div class="header-right">
+    <div class="stats-text">
+      <div class="count"><span id="oppCount">0</span> OPORTUNIDADES</div>
+      <div class="updated">Actualizado <span id="updatedTime">--:--:--</span></div>
+    </div>
+    <div class="live-badge"><span class="live-dot"></span> En vivo</div>
+    <button id="refreshBtn" class="refresh-btn" title="Actualizar ahora"><span class="refresh-icon">⟳</span></button>
+  </div>
 </div>
 
 <div class="controls">
