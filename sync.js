@@ -13,6 +13,7 @@ const TOKEN = process.env.GHL_API_TOKEN;
 const LOCATION_ID = process.env.GHL_LOCATION_ID;
 const PIPELINE_NAME = process.env.GHL_PIPELINE_NAME;
 const DESC_FIELD_KEY = process.env.GHL_DESC_FIELD_KEY || "opportunity.descripcion";
+const PRIORITY_FIELD_KEY = process.env.GHL_PRIORITY_FIELD_KEY || "opportunity.prioridad";
 
 if (!TOKEN) {
     console.error("Falta GHL_API_TOKEN (secreto del repo).");
@@ -37,8 +38,8 @@ const HEADERS = {
 const COLUMN_ORDER = [
   { label: "Mejora Detectada", stageName: "MEJORA DETECTADA" },
   { label: "En marcha", stageName: "EN MARCHA" },
-  { label: "Terminada", stageName: "TERMINADA" },
-  { label: "Esperando / Stand By", stageName: "STAND BY / DESCARTADA" },
+    { label: "Esperando / Stand By", stageName: "STAND BY / DESCARTADA" },
+    { label: "Terminada", stageName: "TERMINADA" },
   ];
 
 function norm(str) {
@@ -81,6 +82,16 @@ const match = fields.find(
           return null;
     }
 }
+async function findPriorityFieldId() {
+    try {
+        const data = await ghlFetch(`${BASE}/locations/${LOCATION_ID}/customFields?model=all`);
+        const fields = data.customFields || data.fields || [];
+        const match = fields.find((f) => norm(f.fieldKey) === norm(PRIORITY_FIELD_KEY));
+        return match ? match.id : null;
+    } catch (err) {
+        return null;
+    }
+}
 async function fetchAllOpportunities(pipelineId) {
     const opportunities = [];
     let startAfter;
@@ -121,6 +132,7 @@ function extractDescription(opportunity, descFieldId) {
 async function main() {
     const pipeline = await findPipeline();
     const descFieldId = await findDescriptionFieldId();
+    const priorityFieldId = await findPriorityFieldId();
     
   const stageIdByName = {};
     for (const stage of pipeline.stages || []) {
@@ -145,6 +157,7 @@ async function main() {
                 id: opp.id,
                 name: opp.name || "(sin nombre)",
                 description: extractDescription(opp, descFieldId),
+            priority: extractDescription(opp, priorityFieldId),
         });
   }
 
