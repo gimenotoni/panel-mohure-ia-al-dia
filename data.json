@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T05:01:34.052Z",
+  "updatedAt": "2026-09-11T05:15:48.540Z",
   "pipeline": "MOHURE - IA AL DÍA",
   "columns": [
     {
@@ -106,24 +106,9 @@
       "label": "En marcha",
       "opportunities": [
         {
-          "id": "T1QDpEpswnjo6qK5PZzs",
-          "name": "M21 · Política de uso de IA y registro de herramientas",
-          "description": "Un documento corto que diga qué herramientas de IA se pueden usar en Mohure, con qué datos y con qué cuentas, y un registro de las que ya se usan.\n\nNo existe ninguna, lo dijo Carmen el 6 de agosto, y el plazo del reglamento europeo venció el 2 de agosto. El borrador está escrito desde el 27 de agosto con cinco puntos por confirmar. Queda hecho cuando Manu lo firme, y desbloquea la criba de CVs (M12) y los psicotécnicos (M31).\n\nLa urgencia subió el 4 de septiembre. Ese día se trabajó con nombres, DNIs, teléfonos y nivel de estudios de trabajadores de una empresa cliente, con la política todavía sin firmar. Ya vamos por detrás de los hechos, así que se manda a Tony ya, junto con el reparto de responsable y encargado del tratamiento.\n\nDentro de esta tarjeta viven ahora cinco hallazgos del registro de herramientas, que antes estaban sueltos como M22 a M26. No son mejoras que se construyan ni se cobren, son cosas que hay que anotar y decidir en el propio registro.\n\n1. Licencias sin repartir. Denisse no aparece en el reparto de Claude Team y trabaja con ChatGPT en cuenta personal. El 4 de septiembre se vio que el agujero es mayor, Lorena comparte cuenta con Carolina y la suscripción figura a nombre de Bianca, con dos organizaciones abiertas.\n\n2. ChatGPT y Gamma en cuenta única, compartida por todo el equipo y sin saber quién sube qué. Falta contar cuántos puestos hay y a nombre de quién.\n\n3. Datos personales repartidos por ordenadores individuales, Drive, Zoho, correo y archivo físico. Aquí no hay nada que preguntar, es el argumento que justifica M17. Ordenar la documentación no es estética, es cumplimiento.\n\n4. Transcriptor de entrevistas sin inventariar. Se usa en entrevistas de candidatos y no sabemos cuál es. Es la más fácil de cerrar, basta con preguntárselo a Carmen, y lleva pendiente desde el 6 de agosto.\n\n5. NotebookLM con documentación de clientes. Meten documentación de ayudas por empresa. No se toca nada hasta preguntar. El problema no es tanto el reglamento de IA como la protección de datos, quién es el encargado del tratamiento y si las condiciones de la cuenta cubren subir datos de terceros. Falta el dato que lo decide todo, si va con la cuenta de Workspace de la empresa o con cuentas sueltas.\n\nNosotros levantamos el mapa. No somos asesores jurídicos y esto lo tiene que validar su asesoría."
-        },
-        {
           "id": "6MCrVv9O3rM5OTfyYTuA",
           "name": "M19 · Prompt de trabajo como skill descargable con vídeo",
           "description": "El prompt de trabajo con el que el equipo describe una tarea a Carmen se entrega como skill de Claude, con un vídeo corto de cómo instalarla y una versión pegable para quien no tenga licencia (Denisse).\n\nDecisión de Tony del 25-ago. No se pone fecha hasta tener las dos sesiones de esta semana (Lorena por un lado, Claudia y Chuse por otro), porque la skill tiene que encajar con cómo trabajan de verdad."
-        },
-        {
-          "id": "VeRJpgNhCDQQWmQt9XBH",
-          "name": "LL18 · Gemini para correos (Workspace contratado y sin usar)",
-          "description": "Mohure ya paga Google Workspace y Gemini viene incluido. Enseñar a usarlo para redactar y resumir correos, sin instalar nada.\n\nCarmen lo cuenta en la P7 y se confirmó en la llamada del 25-ago. Es un llaverito que se explica en una sesión corta."
-        },
-        {
-          "id": "iQHe33zR7uRlzyDuYlO5",
-          "name": "M17 · Carpeta local sincronizada con Drive (estructura de carpetas compartidas)",
-          "description": "Que cada persona tenga las carpetas compartidas de la empresa en su ordenador, sincronizadas con Drive, con una estructura común.\n\nEs la fase 0 del gestor documental: abarata el estado de expediente (D7) y todo lo que viene después. Lo monta Mohure, nosotros enseñamos. Se ve con Carmen el 4-sep con la estructura ya diseñada."
         },
         {
           "id": "4rXpWqLi4SyegQWYLBVx",
@@ -144,6 +129,26 @@
           "id": "vHTd8YNSAgZCmX4hJZ8q",
           "name": "LL33 · Claude en Chrome para FUNDAE",
           "description": "En la reunión con Lorena detectamos que rellena mucho formulario manualmente en la web de Fundae por tanto, le instalamos la extensión de Claude en Chrome, y le rellenan los formularios de cada participante automáticamente a partir de un Excel. El comentario de Lorena fue que esto le va a cambiar la vida y le va a ayudar muchísimo porque le va a ahorrar mucho tiempo en subir cada uno de los participantes de cada una de las formaciones."
+        },
+        {
+          "id": "T1QDpEpswnjo6qK5PZzs",
+          "name": "M21 · Política de uso de IA y registro de herramientas",
+          "description": "Un documento corto que diga qué herramientas de IA se pueden usar en Mohure, con qué datos y con qué cuentas, y un registro de las que ya se usan.\n\nNo existe ninguna, lo dijo Carmen el 6 de agosto, y el plazo del reglamento europeo venció el 2 de agosto. El borrador está escrito desde el 27 de agosto con cinco puntos por confirmar. Queda hecho cuando Manu lo firme, y desbloquea la criba de CVs (M12) y los psicotécnicos (M31).\n\nLa urgencia subió el 4 de septiembre. Ese día se trabajó con nombres, DNIs, teléfonos y nivel de estudios de trabajadores de una empresa cliente, con la política todavía sin firmar. Ya vamos por detrás de los hechos, así que se manda a Tony ya, junto con el reparto de responsable y encargado del tratamiento.\n\nDentro de esta tarjeta viven ahora cinco hallazgos del registro de herramientas, que antes estaban sueltos como M22 a M26. No son mejoras que se construyan ni se cobren, son cosas que hay que anotar y decidir en el propio registro.\n\n1. Licencias sin repartir. Denisse no aparece en el reparto de Claude Team y trabaja con ChatGPT en cuenta personal. El 4 de septiembre se vio que el agujero es mayor, Lorena comparte cuenta con Carolina y la suscripción figura a nombre de Bianca, con dos organizaciones abiertas.\n\n2. ChatGPT y Gamma en cuenta única, compartida por todo el equipo y sin saber quién sube qué. Falta contar cuántos puestos hay y a nombre de quién.\n\n3. Datos personales repartidos por ordenadores individuales, Drive, Zoho, correo y archivo físico. Aquí no hay nada que preguntar, es el argumento que justifica M17. Ordenar la documentación no es estética, es cumplimiento.\n\n4. Transcriptor de entrevistas sin inventariar. Se usa en entrevistas de candidatos y no sabemos cuál es. Es la más fácil de cerrar, basta con preguntárselo a Carmen, y lleva pendiente desde el 6 de agosto.\n\n5. NotebookLM con documentación de clientes. Meten documentación de ayudas por empresa. No se toca nada hasta preguntar. El problema no es tanto el reglamento de IA como la protección de datos, quién es el encargado del tratamiento y si las condiciones de la cuenta cubren subir datos de terceros. Falta el dato que lo decide todo, si va con la cuenta de Workspace de la empresa o con cuentas sueltas.\n\nNosotros levantamos el mapa. No somos asesores jurídicos y esto lo tiene que validar su asesoría."
+        },
+        {
+          "id": "VeRJpgNhCDQQWmQt9XBH",
+          "name": "LL18 · Gemini para correos (Workspace contratado y sin usar)",
+          "description": "Mohure ya paga Google Workspace y Gemini viene incluido. Enseñar a usarlo para redactar y resumir correos, sin instalar nada.\n\nCarmen lo cuenta en la P7 y se confirmó en la llamada del 25-ago. Es un llaverito que se explica en una sesión corta."
+        },
+        {
+          "id": "iQHe33zR7uRlzyDuYlO5",
+          "name": "M17 · Carpeta local sincronizada con Drive (estructura de carpetas compartidas)",
+          "description": "Que cada persona tenga las carpetas compartidas de la empresa en su ordenador, sincronizadas con Drive, con una estructura común.\n\nEs la fase 0 del gestor documental: abarata el estado de expediente (D7) y todo lo que viene después. Lo monta Mohure, nosotros enseñamos. Se ve con Carmen el 4-sep con la estructura ya diseñada."
+        },
+        {
+          "id": "Ppd6QtR1exzAa8o65xIz",
+          "name": "M7 · Estado de expediente (qué ha enviado el cliente y qué falta)",
+          "description": "Decirle al cliente qué documentación ha enviado y cuál falta, sin revisarlo a mano. Empieza pequeño, con un expediente y una lista de requisitos.\n\nEs el primer trozo de la gestión documental que Mohure no tiene, y la base de lo que viene después: enlazar facturas con justificantes y clasificar lo que llega desordenado.\n\nLo sufren 7 de 9 personas, Ayudas primero. La solicitud y recepción documental es transversal a toda la casa."
         }
       ]
     },
