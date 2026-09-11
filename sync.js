@@ -67,10 +67,9 @@ async function findPipeline() {
 
 async function findDescriptionFieldId() {
     try {
-          const data = await ghlFetch(`${BASE}/locations/${LOCATION_ID}/customFields`);
+          const data = await ghlFetch(`${BASE}/locations/${LOCATION_ID}/customFields?model=all`);
           const fields = data.customFields || data.fields || [];
-        console.error("DEBUG_FIELDS", JSON.stringify(fields.map((f) => ({ id: f.id, key: f.fieldKey, name: f.name }))));
-          const match = fields.find(
+const match = fields.find(
                   (f) =>
                             norm(f.fieldKey) === norm(DESC_FIELD_KEY) ||
                             norm(f.fieldKey).endsWith(norm(DESC_FIELD_KEY.split(".").pop())) ||
@@ -82,7 +81,6 @@ async function findDescriptionFieldId() {
           return null;
     }
 }
-
 async function fetchAllOpportunities(pipelineId) {
     const opportunities = [];
     let startAfter;
@@ -137,7 +135,6 @@ async function main() {
     });
 
   const opportunities = await fetchAllOpportunities(pipeline.id);
-    console.error("DEBUG_FIRST_OPP", JSON.stringify(opportunities[0]));
 
   const columns = COLUMN_ORDER.map((col) => ({ label: col.label, opportunities: [] }));
 
