@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOHURE - IA AL DÍA · Panel de oportunidades</title>
+  <style>
+      :root {
+            --bg: #f4f5f7;
+            --panel-bg: #ffffff;
+            --column-bg: #ebecf0;
+            --text: #172b4d;
+            --text-muted: #5e6c84;
+            --border: #dfe1e6;
+            --card-shadow: 0 1px 2px rgba(9, 30, 66, 0.15), 0 1px 1px rgba(9, 30, 66, 0.1);
+            --accent-1: #0079bf;
+            --accent-2: #61bd4f;
+            --accent-3: #00875a;
+            --accent-4: #ff9f1a;
+      }
+      @media (prefers-color-scheme: dark) {
+            :root {
+                    --bg: #0d1117;
+                    --panel-bg: #161b22;
+                    --column-bg: #1c2128;
+                    --text: #e6edf3;
+                    --text-muted: #8b949e;
+                    --border: #30363d;
+                    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            }
+      }
+      * { box-sizing: border-box; }
+      body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      header {
+            padding: 20px 24px 12px;
+      }
+      header h1 {
+            margin: 0 0 4px;
+            font-size: 20px;
+      }
+      header p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+      }
+      #status {
+            padding: 0 24px 12px;
+            font-size: 12px;
+            color: var(--text-muted);
+      }
+      #board {
+            display: flex;
+            gap: 16px;
+            padding: 0 24px 24px;
+            overflow-x: auto;
+            align-items: flex-start;
+      }
+      .column {
+            background: var(--column-bg);
+            border-radius: 10px;
+            min-width: 280px;
+            max-width: 320px;
+            flex: 1 1 280px;
+            display: flex;
+            flex-direction: column;
+            max-height: calc(100vh - 140px);
+      }
+      .column-header {
+            padding: 12px 14px 8px;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+      }
+      .column-header .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+      }
+      .column:nth-child(1) .dot { background: var(--accent-1); }
+      .column:nth-child(2) .dot { background: var(--accent-4); }
+      .column:nth-child(3) .dot { background: var(--accent-3); }
+      .column:nth-child(4) .dot { background: var(--accent-2); }
+      .column-count {
+            margin-left: auto;
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 12px;
+      }
+      .cards {
+            padding: 0 10px 10px;
+            overflow-y: auto;
+      }
+      .card {
+            background: var(--panel-bg);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border);
+      }
+      .card-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 0 4px;
+      }
+      .card-desc {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin: 0;
+            white-space: pre-wrap;
+      }
+      .empty {
+            padding: 20px 12px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+      }
+      #error {
+            display: none;
+            margin: 0 24px 16px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            background: #ffebe9;
+            color: #82231d;
+            font-size: 13px;
+      }
+      @media (prefers-color-scheme: dark) {
+            #error { background: #3d1f1c; color: #ffb4a8; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>MOHURE - IA AL DÍA</h1>
+      <p>Oportunidades del pipeline, agrupadas por estado</p>
+    </header>
+  <div id="status">Cargando…</div>
+  <div id="error"></div>
+  <div id="board"></div>
+  
+  <script>
+      const boardEl = document.getElementById("board");
+      const statusEl = document.getElementById("status");
+      const errorEl = document.getElementById("error");
+
+      function formatDate(iso) {
+            if (!iso) return "";
+            const d = new Date(iso);
+            return d.toLocaleString("es-ES", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit",
+            });
+      }
+
+      function renderBoard(data) {
+            boardEl.innerHTML = "";
+            (data.columns || []).forEach((col) => {
+                    const column = document.createElement("div");
+                    column.className = "column";
+
+                    const header = document.createElement("div");
+                    header.className = "column-header";
+                    header.innerHTML = `<span class="dot"></span><span>${col.label}</span><span class="column-count">${col.opportunities.length}</span>`;
+                    column.appendChild(header);
+
+                    const cardsWrap = document.createElement("div");
+                    cardsWrap.className = "cards";
+
+                    if (!col.opportunities.length) {
+                              const empty = document.createElement("div");
+                              empty.className = "empty";
+                              empty.textContent = "Sin oportunidades";
+                              cardsWrap.appendChild(empty);
+                    } else {
+                              col.opportunities.forEach((opp) => {
+                                          const card = document.createElement("div");
+                                          card.className = "card";
+                                          const title = document.createElement("p");
+                                          title.className = "card-title";
+                                          title.textContent = opp.name;
+                                          card.appendChild(title);
+                                          if (opp.description) {
+                                                        const desc = document.createElement("p");
+                                                        desc.className = "card-desc";
+                                                        desc.textContent = opp.description;
+                                                        card.appendChild(desc);
+                                          }
+                                          cardsWrap.appendChild(card);
+                              });
+                    }
+
+                    column.appendChild(cardsWrap);
+                    boardEl.appendChild(column);
+            });
+      }
+
+      async function loadData() {
+            try {
+                    const res = await fetch(`data.json?t=${Date.now()}`, { cache: "no-store" });
+                    if (!res.ok) throw new Error(`No se pudo cargar data.json (HTTP ${res.status})`);
+                    const data = await res.json();
+                    renderBoard(data);
+                    statusEl.textContent = `Última actualización: ${formatDate(data.updatedAt)} · Pipeline: ${data.pipeline || ""}`;
+                    errorEl.style.display = "none";
+            } catch (err) {
+                    errorEl.textContent = `Error cargando datos: ${err.message}`;
+                    errorEl.style.display = "block";
+            }
+      }
+
+      loadData();
+      setInterval(loadData, 5 * 60 * 1000); // refresca la vista cada 5 minutos
+  </script>
+  </body>
+</html>
