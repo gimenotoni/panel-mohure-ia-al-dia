@@ -136,6 +136,7 @@ async function main() {
     });
 
   const opportunities = await fetchAllOpportunities(pipeline.id);
+    console.error("DEBUG_FIRST_OPP", JSON.stringify(opportunities[0]));
 
   const columns = COLUMN_ORDER.map((col) => ({ label: col.label, opportunities: [] }));
 
