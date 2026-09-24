@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T19:25:05.986Z",
+  "updatedAt": "2026-09-24T20:39:03.617Z",
   "pipeline": "MOHURE - IA AL DÍA",
   "columns": [
     {
@@ -201,6 +201,18 @@
       "label": "Terminada",
       "opportunities": [
         {
+          "id": "vHTd8YNSAgZCmX4hJZ8q",
+          "name": "LL33 · Claude en Chrome para FUNDAE",
+          "description": "En la reunión con Lorena detectamos que rellena mucho formulario manualmente en la web de Fundae por tanto, le instalamos la extensión de Claude en Chrome, y le rellenan los formularios de cada participante automáticamente a partir de un Excel. El comentario de Lorena fue que esto le va a cambiar la vida y le va a ayudar muchísimo porque le va a ahorrar mucho tiempo en subir cada uno de los participantes de cada una de las formaciones.",
+          "priority": ""
+        },
+        {
+          "id": "T1QDpEpswnjo6qK5PZzs",
+          "name": "M21 · Política de uso de IA y registro de herramientas",
+          "description": "Un documento corto que diga qué herramientas de IA se pueden usar en Mohure, con qué datos y con qué cuentas, y un registro de las que ya se usan.\n\nNo existe ninguna, lo dijo Carmen el 6 de agosto, y el plazo del reglamento europeo venció el 2 de agosto. El borrador está escrito desde el 27 de agosto con cinco puntos por confirmar. Queda hecho cuando Manu lo firme, y desbloquea la criba de CVs (M12) y los psicotécnicos (M31).\n\nLa urgencia subió el 4 de septiembre. Ese día se trabajó con nombres, DNIs, teléfonos y nivel de estudios de trabajadores de una empresa cliente, con la política todavía sin firmar. Ya vamos por detrás de los hechos, así que se manda a Tony ya, junto con el reparto de responsable y encargado del tratamiento.\n\nDentro de esta tarjeta viven ahora cinco hallazgos del registro de herramientas, que antes estaban sueltos como M22 a M26. No son mejoras que se construyan ni se cobren, son cosas que hay que anotar y decidir en el propio registro.\n\n1. Licencias sin repartir. Denisse no aparece en el reparto de Claude Team y trabaja con ChatGPT en cuenta personal. El 4 de septiembre se vio que el agujero es mayor, Lorena comparte cuenta con Carolina y la suscripción figura a nombre de Bianca, con dos organizaciones abiertas.\n\n2. ChatGPT y Gamma en cuenta única, compartida por todo el equipo y sin saber quién sube qué. Falta contar cuántos puestos hay y a nombre de quién.\n\n3. Datos personales repartidos por ordenadores individuales, Drive, Zoho, correo y archivo físico. Aquí no hay nada que preguntar, es el argumento que justifica M17. Ordenar la documentación no es estética, es cumplimiento.\n\n4. Transcriptor de entrevistas sin inventariar. Se usa en entrevistas de candidatos y no sabemos cuál es. Es la más fácil de cerrar, basta con preguntárselo a Carmen, y lleva pendiente desde el 6 de agosto.\n\n5. NotebookLM con documentación de clientes. Meten documentación de ayudas por empresa. No se toca nada hasta preguntar. El problema no es tanto el reglamento de IA como la protección de datos, quién es el encargado del tratamiento y si las condiciones de la cuenta cubren subir datos de terceros. Falta el dato que lo decide todo, si va con la cuenta de Workspace de la empresa o con cuentas sueltas.\n\nNosotros levantamos el mapa. No somos asesores jurídicos y esto lo tiene que validar su asesoría.",
+          "priority": "Prioridad Alta"
+        },
+        {
           "id": "VeRJpgNhCDQQWmQt9XBH",
           "name": "LL18 · Gemini para correos (Workspace contratado y sin usar)",
           "description": "Mohure ya paga Google Workspace y Gemini viene incluido. Enseñar a usarlo para redactar y resumir correos, sin instalar nada.\n\nCarmen lo cuenta en la P7 y se confirmó en la llamada del 25-ago. Es un llaverito que se explica en una sesión corta.",
@@ -210,6 +222,30 @@
           "id": "iQHe33zR7uRlzyDuYlO5",
           "name": "M17 · Carpeta local sincronizada con Drive (estructura de carpetas compartidas)",
           "description": "Que cada persona tenga las carpetas compartidas de la empresa en su ordenador, sincronizadas con Drive, con una estructura común.\n\nEs la fase 0 del gestor documental: abarata el estado de expediente (D7) y todo lo que viene después. Lo monta Mohure, nosotros enseñamos. Se ve con Carmen el 4-sep con la estructura ya diseñada.",
+          "priority": ""
+        },
+        {
+          "id": "zR1Mlk6bVvT43As8Mksn",
+          "name": "M9 · Reclamación de impagos desde el Excel de seguimiento",
+          "description": "Se presenta skill el día 18 sept. 26\nSacar qué facturas están vencidas y sin cobrar, y preparar la reclamación al cliente sin revisarlo a mano.\n\nLa facturación está en Zoho, y de ahí sale el listado de lo que se debe con la fecha de emisión de cada factura. Lorena va marcando los pagos uno a uno y, cuando una empresa paga varias facturas de golpe sin decir cuáles, las cuadra a mano con la calculadora.\n\nLo que ella pide son tres plantillas de aviso, primero, segundo y tercero, cada una con su plazo, y que salgan desde su nombre y no desde Zoho, porque así las abren más. Manu no quiere conexión directa entre la IA y Zoho, así que el cruce se hace con ella delante.\n\nLo piden Claudia y Lorena, Manu lo puso encima de la mesa el 25 de agosto y es la prioridad 1 del 28 de agosto. Los cobros han pasado de Claudia a Lorena, que dice que son de su puesto.",
+          "priority": ""
+        },
+        {
+          "id": "SLtX4oa6JZ6TuhSGXLDR",
+          "name": "M3 · Tono de correo de la casa",
+          "description": "Entregado mediante Skill el 18 de sept.\nUna guía de voz para que los correos que salen de Mohure suenen igual, los escriba quien los escriba, y para contestar más rápido los repetitivos.\n\nSe construye junto con la D31 (ofertas de empleo), que usa la misma guía con otro destinatario.",
+          "priority": ""
+        },
+        {
+          "id": "Ppd6QtR1exzAa8o65xIz",
+          "name": "M7 · Estado de expediente (qué ha enviado el cliente y qué falta)",
+          "description": "Decirle al cliente qué documentación ha enviado y cuál falta, sin revisarlo a mano. Empieza pequeño, con un expediente y una lista de requisitos.\n\nEs el primer trozo de la gestión documental que Mohure no tiene, y la base de lo que viene después: enlazar facturas con justificantes y clasificar lo que llega desordenado.\n\nLo sufren 7 de 9 personas, Ayudas primero. La solicitud y recepción documental es transversal a toda la casa.",
+          "priority": ""
+        },
+        {
+          "id": "w9XkK9Ve5vafa9Ik69m2",
+          "name": "M1 · Skill de propuestas (formación y selección)",
+          "description": "De la llamada o la nota de voz a la propuesta con la plantilla de la casa. Una sola skill para toda la casa, que guarda dentro los tipos de formación y selección y los datos de la empresa.\n\nLa piden 5 de 9 personas (Estela, Alicia, Carmen, Carolina y Rocío). Ya usan transcriptores, así que la entrada está resuelta.\n\nMaterial recibido el 2-sep: 4 propuestas reales de selección. Falta una muestra de formación.",
           "priority": ""
         }
       ]
