@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T09:19:22.181Z",
+  "updatedAt": "2026-10-01T16:38:11.619Z",
   "pipeline": "MOHURE - IA AL DÍA",
   "columns": [
     {
@@ -33,12 +33,6 @@
           "id": "unbCBuKqAVA8MIMPF864",
           "name": "P29 · Mapping de mercado y búsquedas en LinkedIn y bases de datos",
           "description": "Buscar candidatos y empresas en LinkedIn y bases de datos para un proceso de selección.\n\nDel correo de Carmen del 2-sep. Es hermana de la D16, con el mismo motor y el mismo bloqueo, pero aquí los datos son de personas, así que es más delicada y va aparte. Encuadre en protección de datos antes de nada.",
-          "priority": ""
-        },
-        {
-          "id": "FBwzSlejKskPJpdOkvg9",
-          "name": "P16 · Prospección y búsqueda de empresas para campañas",
-          "description": "Buscar empresas que encajen con una campaña comercial y preparar el primer contacto, en vez de hacerlo a puerta fría a mano.\n\nAntes de construir nada hay que encuadrarlo en protección de datos. Es hermana de la D32 (mapping de personas en LinkedIn), que es más delicada.",
           "priority": ""
         },
         {
