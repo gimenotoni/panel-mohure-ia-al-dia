@@ -1,10 +1,16 @@
 {
-  "updatedAt": "2026-10-07T09:19:04.621Z",
+  "updatedAt": "2026-10-07T16:47:36.888Z",
   "pipeline": "MOHURE - IA AL DÍA",
   "columns": [
     {
       "label": "Mejora Detectada",
       "opportunities": [
+        {
+          "id": "i1awjiA6ePy45npuabIq",
+          "name": "M39 · Base de formadores (formaciones, zona, precio y habilidades)",
+          "description": "Reunir en un solo sitio a todos los formadores, con sus formaciones estrella, la zona a la que llegan, el precio por hora y sus habilidades, para encontrar rápido el que encaja con cada cliente. Lo piden Carmen y Alicia, cada una por su lado.\n\nHoy esa información está repartida entre la base de proveedores de Zoho y los archivos adjuntos de cada formador, y Claude no consigue leer esos adjuntos. Carmen calcula de 1 a 2 horas una vez al mes y Alicia de 30 minutos a 1 hora cada vez que entra un cliente.\n\nTiene dos partes. Consultar la base con una skill o un proyecto de Claude entra en el acompañamiento. Que se cargue sola desde Zoho sería una automatización y se valora aparte, viendo con ellas hasta dónde se puede llegar.\n\nPara empezar hace falta una exportación de los proveedores de Zoho con sus adjuntos y el visto bueno de Manu, porque son datos de terceros.",
+          "priority": ""
+        },
         {
           "id": "k3WHAiBhiuhNSEoHE0v6",
           "name": "M37 · Alta anual de empresas en FUNDAE",
@@ -48,6 +54,12 @@
           "priority": ""
         },
         {
+          "id": "62TRP65ymDxFOpZPGXYD",
+          "name": "M12 · Criba de CVs con supervisión humana",
+          "description": "Hacer una primera criba de currículos contra los requisitos de la oferta, dejando la decisión a la persona.\n\nEs un caso de alto riesgo en el reglamento europeo de IA: espera a que Manu firme la política de uso de IA (D21). Después se mira si se hace dentro de Zoho Recruit.",
+          "priority": ""
+        },
+        {
           "id": "kx53uWnxt2Qr3sHzaaNg",
           "name": "M11 · Asistente de elegibilidad de ayudas según la documentación",
           "description": "Con las bases de una convocatoria y la documentación de la empresa, decir si puede optar a la ayuda y qué le falta. Siempre con una persona validando.\n\nVa después del bloque documental, porque necesita que los documentos estén ordenados.",
@@ -75,12 +87,6 @@
           "id": "RJoAonkomvRPmZXJ3ofV",
           "name": "M5 · Registro asistido de notas en Zoho CRM",
           "description": "Dictar o pegar las notas de una llamada o reunión y que queden registradas en Zoho CRM en el contacto correcto, sin teclearlas.\n\nLo piden 4 de 6 personas en la encuesta inicial y Carmen lo confirma en la P22. Es el primer paso para que el CRM tenga datos con los que trabajar (D14 y D15).",
-          "priority": ""
-        },
-        {
-          "id": "bD2dNzJyy5I1lEZOWXlS",
-          "name": "M4 · Presentaciones desde la propuesta (hoy con Gamma)",
-          "description": "Sacar la presentación comercial directamente de la propuesta ya escrita, en vez de rehacerla en Gamma.\n\nComparte plantilla y voz con la skill de propuestas (D1) y con la redacción de metodologías y materiales comerciales (D36). Se construye después de D1, reutilizando lo mismo.",
           "priority": ""
         }
       ]
@@ -116,6 +122,12 @@
           "id": "llGBGHiUq1mBHOd5Ddir",
           "name": "M2 · Informe de selección desde la entrevista",
           "description": "Pasar de la entrevista (transcripción o notas) al informe de valoración del candidato con la estructura de la casa, sin redactarlo desde cero.\n\nYa usan transcriptores en las entrevistas, así que la entrada está resuelta. Carmen lo pide dos veces en su correo del 2-sep: notas estructuradas y borradores de informes.",
+          "priority": ""
+        },
+        {
+          "id": "bD2dNzJyy5I1lEZOWXlS",
+          "name": "M4 · Presentaciones desde la propuesta (hoy con Gamma)",
+          "description": "Sacar la presentación comercial directamente de la propuesta ya escrita, en vez de rehacerla en Gamma.\n\nComparte plantilla y voz con la skill de propuestas (D1) y con la redacción de metodologías y materiales comerciales (D36). Se construye después de D1, reutilizando lo mismo.",
           "priority": ""
         }
       ]
@@ -181,12 +193,6 @@
           "id": "6MCrVv9O3rM5OTfyYTuA",
           "name": "M19 · Prompt de trabajo como skill descargable con vídeo",
           "description": "Se descarta de momento porque con los formularios ya recibimos feedback bueno.\nEl prompt de trabajo con el que el equipo describe una tarea a Carmen se entrega como skill de Claude, con un vídeo corto de cómo instalarla y una versión pegable para quien no tenga licencia (Denisse).\n\nDecisión de Tony del 25-ago. No se pone fecha hasta tener las dos sesiones de esta semana (Lorena por un lado, Claudia y Chuse por otro), porque la skill tiene que encajar con cómo trabajan de verdad.",
-          "priority": ""
-        },
-        {
-          "id": "62TRP65ymDxFOpZPGXYD",
-          "name": "M12 · Criba de CVs con supervisión humana",
-          "description": "Hacer una primera criba de currículos contra los requisitos de la oferta, dejando la decisión a la persona.\n\nEs un caso de alto riesgo en el reglamento europeo de IA: espera a que Manu firme la política de uso de IA (D21). Después se mira si se hace dentro de Zoho Recruit.",
           "priority": ""
         }
       ]
